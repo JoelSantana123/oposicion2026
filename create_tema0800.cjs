@@ -1,0 +1,762 @@
+const fs = require('fs');
+const path = require('path');
+
+const tema0800 = {
+  "tema_id": "0800",
+  "tema_nombre": "Estatuto de Autonomía de Canarias y Normativa CAC",
+  "preguntas": [
+    {
+      "id": "0800-01",
+      "tema": "0800",
+      "nivel": "oro",
+      "enunciado": "Según el Estatuto de Autonomía, la capitalidad de Canarias se fija:",
+      "opciones": [
+        "Exclusivamente en Santa Cruz de Tenerife.",
+        "Exclusivamente en Las Palmas de Gran Canaria.",
+        "Compartidamente entre las ciudades de Santa Cruz de Tenerife y Las Palmas de Gran Canaria.",
+        "Alternando por periodos legislativos entre ambas capitales."
+      ],
+      "correcta": 2,
+      "justificacion": "El artículo 5.1 fija la capitalidad de forma compartida SIEMPRE Y EN TODO MOMENTO en las ciudades de Las Palmas de Gran Canaria y Santa Cruz de Tenerife.",
+      "referencia": "Art. 5.1 EAC"
+    },
+    {
+      "id": "0800-02",
+      "tema": "0800",
+      "nivel": "plata",
+      "enunciado": "La sede de la Presidencia del Gobierno de Canarias:",
+      "opciones": [
+        "Está fijada permanentemente en Las Palmas de Gran Canaria.",
+        "Alternará entre ambas capitales por periodos legislativos.",
+        "Está fijada permanentemente en Santa Cruz de Tenerife.",
+        "Se decide por el Parlamento al inicio de cada legislatura."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 5.1 detalla que la sede de la Presidencia de Canarias alternará entre ambas ciudades capitalinas por periodos legislativos.",
+      "referencia": "Art. 5.1 EAC"
+    },
+    {
+      "id": "0800-03",
+      "tema": "0800",
+      "nivel": "bronce",
+      "enunciado": "¿En qué ciudad tiene su sede el Parlamento de Canarias?",
+      "opciones": [
+        "Santa Cruz de Tenerife.",
+        "Las Palmas de Gran Canaria.",
+        "San Cristóbal de La Laguna.",
+        "Telde."
+      ],
+      "correcta": 0,
+      "justificacion": "El artículo 5.2 establece que el Parlamento de Canarias tiene su sede en la ciudad de Santa Cruz de Tenerife.",
+      "referencia": "Art. 5.2 EAC"
+    },
+    {
+      "id": "0800-04",
+      "tema": "0800",
+      "nivel": "plata",
+      "enunciado": "¿Qué isla se reconoce en el Estatuto de Autonomía de 2018 como isla y que está agregada administrativamente a Lanzarote?",
+      "opciones": [
+        "Isla de Lobos.",
+        "Isla de La Graciosa.",
+        "Alegranza.",
+        "Montaña Clara."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 4.1 incluye a la isla de La Graciosa. El art. 65.1 aclara que estará agregada administrativamente a Lanzarote.",
+      "referencia": "Art. 4.1 y 65.1 EAC"
+    },
+    {
+      "id": "0800-05",
+      "tema": "0800",
+      "nivel": "oro",
+      "enunciado": "Los poderes de la Comunidad Autónoma de Canarias se ejercen a través de:",
+      "opciones": [
+        "El Parlamento, el Gobierno y los Cabildos.",
+        "El Parlamento, el Gobierno y el Tribunal Superior de Justicia.",
+        "El Parlamento, la Presidencia y el Gobierno.",
+        "El Parlamento, los Cabildos y la Presidencia."
+      ],
+      "correcta": 2,
+      "justificacion": "El artículo 2.2 señala que los poderes de la CAC se ejercen a través del Parlamento, de la Presidencia y del Gobierno.",
+      "referencia": "Art. 2.2 EAC"
+    },
+    {
+      "id": "0800-06",
+      "tema": "0800",
+      "nivel": "bronce",
+      "enunciado": "La bandera de Canarias está formada por tres franjas iguales en sentido vertical, cuyos colores son, a partir del asta:",
+      "opciones": [
+        "Amarillo, azul y blanco.",
+        "Blanco, amarillo y azul.",
+        "Blanco, azul y amarillo.",
+        "Azul, blanco y amarillo."
+      ],
+      "correcta": 2,
+      "justificacion": "El artículo 7.1 define la bandera con los colores blanco, azul y amarillo (a partir del asta).",
+      "referencia": "Art. 7.1 EAC"
+    },
+    {
+      "id": "0800-07",
+      "tema": "0800",
+      "nivel": "plata",
+      "enunciado": "¿Qué día se celebra la festividad institucional de la Comunidad Autónoma de Canarias?",
+      "opciones": [
+        "10 de agosto.",
+        "30 de mayo.",
+        "12 de octubre.",
+        "25 de julio."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 7.4 establece que la Comunidad Autónoma celebrará su festividad institucional el día 30 de mayo.",
+      "referencia": "Art. 7.4 EAC"
+    },
+    {
+      "id": "0800-08",
+      "tema": "0800",
+      "nivel": "oro",
+      "enunciado": "Según el Estatuto de Autonomía de Canarias, el número de diputados del Parlamento no será inferior a:",
+      "opciones": [
+        "50 ni superior a 75.",
+        "60 ni superior a 70.",
+        "40 ni superior a 80.",
+        "55 ni superior a 65."
+      ],
+      "correcta": 0,
+      "justificacion": "El artículo 39.2.b establece que el número de diputados no será inferior a 50 ni superior a 75.",
+      "referencia": "Art. 39.2.b EAC"
+    },
+    {
+      "id": "0800-09",
+      "tema": "0800",
+      "nivel": "oro",
+      "enunciado": "¿Cuál es la duración del mandato de los diputados del Parlamento de Canarias?",
+      "opciones": [
+        "5 años.",
+        "4 años, sin perjuicio de los supuestos de disolución anticipada.",
+        "4 años, de forma improrrogable e indisoluble.",
+        "6 años."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 38.3 indica que la duración del mandato será de 4 años, sin perjuicio de los supuestos de disolución anticipada.",
+      "referencia": "Art. 38.3 EAC"
+    },
+    {
+      "id": "0800-10",
+      "tema": "0800",
+      "nivel": "plata",
+      "enunciado": "Los miembros del Parlamento de Canarias, durante su mandato:",
+      "opciones": [
+        "Gozan de inmunidad y no podrán ser detenidos en ningún caso.",
+        "Gozan de fuero especial ante el Tribunal Supremo.",
+        "Son inviolables por los votos y opiniones emitidos y no podrán ser detenidos sino en caso de flagrante delito.",
+        "No percibirán retribución económica alguna."
+      ],
+      "correcta": 2,
+      "justificacion": "El artículo 40.2 establece la inviolabilidad y que no podrán ser detenidos ni retenidos sino en caso de flagrante delito. El aforamiento desapareció en el nuevo Estatuto.",
+      "referencia": "Art. 40.2 EAC"
+    },
+    {
+      "id": "0800-11",
+      "tema": "0800",
+      "nivel": "oro",
+      "enunciado": "La iniciativa legislativa ante el Parlamento de Canarias NO corresponde a:",
+      "opciones": [
+        "Al Gobierno de Canarias.",
+        "A los diputados.",
+        "A los cabildos insulares.",
+        "A los ayuntamientos de forma individual."
+      ],
+      "correcta": 3,
+      "justificacion": "El artículo 44 otorga iniciativa al Gobierno, diputados, cabildos y ayuntamientos pero actuando de forma AGRUPADA, no a un ayuntamiento individual.",
+      "referencia": "Art. 44 EAC"
+    },
+    {
+      "id": "0800-12",
+      "tema": "0800",
+      "nivel": "plata",
+      "enunciado": "Para la iniciativa legislativa popular en el Parlamento de Canarias, se requerirá la presentación de al menos:",
+      "opciones": [
+        "10.000 firmas.",
+        "15.000 firmas.",
+        "20.000 firmas.",
+        "50.000 firmas."
+      ],
+      "correcta": 1,
+      "justificacion": "De acuerdo con el desarrollo de la participación ciudadana y las opciones tradicionales del temario de Canarias, se requieren al menos 15.000 firmas acreditadas.",
+      "referencia": "Iniciativa Popular"
+    },
+    {
+      "id": "0800-13",
+      "tema": "0800",
+      "nivel": "oro",
+      "enunciado": "El Gobierno de Canarias, en caso de extraordinaria y urgente necesidad, puede dictar normas con rango de ley denominadas:",
+      "opciones": [
+        "Leyes urgentes.",
+        "Decretos legislativos.",
+        "Reales Decretos-leyes.",
+        "Decretos-leyes."
+      ],
+      "correcta": 3,
+      "justificacion": "El artículo 46 permite al Gobierno dictar 'decretos-leyes' (no Reales, ya que no los expide el Rey).",
+      "referencia": "Art. 46 EAC"
+    },
+    {
+      "id": "0800-14",
+      "tema": "0800",
+      "nivel": "plata",
+      "enunciado": "Los decretos-leyes dictados por el Gobierno de Canarias deben ser convalidados o derogados por el Parlamento en un plazo de:",
+      "opciones": [
+        "15 días hábiles.",
+        "30 días hábiles.",
+        "30 días naturales.",
+        "2 meses."
+      ],
+      "correcta": 2,
+      "justificacion": "El artículo 46.3 establece que los decretos-leyes deberán convalidarse por el Parlamento de Canarias en el plazo de 30 días naturales.",
+      "referencia": "Art. 46.3 EAC"
+    },
+    {
+      "id": "0800-15",
+      "tema": "0800",
+      "nivel": "oro",
+      "enunciado": "Para la elección del Presidente de Canarias, en la primera votación en el Parlamento se requerirá:",
+      "opciones": [
+        "Mayoría absoluta.",
+        "Mayoría simple.",
+        "Mayoría de tres quintos.",
+        "Unanimidad."
+      ],
+      "correcta": 0,
+      "justificacion": "El artículo 48.3 establece que deberá obtener en primera votación mayoría absoluta.",
+      "referencia": "Art. 48.3 EAC"
+    },
+    {
+      "id": "0800-16",
+      "tema": "0800",
+      "nivel": "oro",
+      "enunciado": "Si el candidato a la Presidencia de Canarias no obtiene mayoría absoluta en la primera votación, ¿qué sucederá?",
+      "opciones": [
+        "Queda automáticamente descartado.",
+        "Se procederá a una nueva votación pasadas 48 horas, bastando mayoría simple.",
+        "Se procederá a una nueva votación pasadas 24 horas, requiriendo mayoría absoluta.",
+        "El Rey propondrá a un nuevo candidato."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 48.3 indica que de no obtenerla, se procederá a una nueva votación pasadas 48 horas, y la confianza se entenderá otorgada si obtuviera mayoría simple.",
+      "referencia": "Art. 48.3 EAC"
+    },
+    {
+      "id": "0800-17",
+      "tema": "0800",
+      "nivel": "oro",
+      "enunciado": "El límite máximo de consejeros y consejeras en el Gobierno de Canarias según el nuevo Estatuto de Autonomía es de:",
+      "opciones": [
+        "11 miembros.",
+        "10 miembros.",
+        "15 miembros.",
+        "No existe límite máximo."
+      ],
+      "correcta": 3,
+      "justificacion": "El nuevo Estatuto eliminó el tope máximo de 11 miembros que existía en el anterior. El artículo 51 no establece límite.",
+      "referencia": "Art. 51 EAC"
+    },
+    {
+      "id": "0800-18",
+      "tema": "0800",
+      "nivel": "plata",
+      "enunciado": "¿Qué mayoría se exige en el Parlamento para la aprobación de una moción de censura contra el Gobierno de Canarias?",
+      "opciones": [
+        "Mayoría simple.",
+        "Mayoría de dos tercios.",
+        "Mayoría absoluta.",
+        "Mayoría de tres quintos."
+      ],
+      "correcta": 2,
+      "justificacion": "El artículo 55 establece que el Parlamento adopta la moción de censura por mayoría absoluta.",
+      "referencia": "Art. 55 EAC"
+    },
+    {
+      "id": "0800-19",
+      "tema": "0800",
+      "nivel": "bronce",
+      "enunciado": "Toda moción de censura en Canarias debe incluir el nombre de un candidato a la Presidencia y ser presentada al menos por:",
+      "opciones": [
+        "El 10% de los miembros del Parlamento.",
+        "El 15% de los miembros del Parlamento.",
+        "El 20% de los miembros del Parlamento.",
+        "Un tercio de los miembros del Parlamento."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 55 señala que debe ser presentada por al menos el 15% de los miembros del Parlamento.",
+      "referencia": "Art. 55 EAC"
+    },
+    {
+      "id": "0800-20",
+      "tema": "0800",
+      "nivel": "plata",
+      "enunciado": "¿Puede el Presidente o Presidenta de Canarias disolver el Parlamento de forma anticipada?",
+      "opciones": [
+        "No, en ningún caso.",
+        "Sí, bajo su exclusiva responsabilidad y previa deliberación del Gobierno.",
+        "Sí, pero requiere autorización del Rey.",
+        "Sí, pero sólo si el Parlamento rechaza los presupuestos."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 56 (Novedad del Estatuto 2018) permite al Presidente disolver el Parlamento previa deliberación del Gobierno.",
+      "referencia": "Art. 56 EAC"
+    },
+    {
+      "id": "0800-21",
+      "tema": "0800",
+      "nivel": "oro",
+      "enunciado": "La alta instancia comisionada del Parlamento de Canarias para la defensa de los derechos fundamentales y las libertades públicas se denomina:",
+      "opciones": [
+        "Defensor del Pueblo Canario.",
+        "Diputación del Común.",
+        "Comisionado de Transparencia.",
+        "Consejo Consultivo."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 57 establece que la Diputación del Común es la alta instancia comisionada del Parlamento para la defensa de los derechos fundamentales.",
+      "referencia": "Art. 57 EAC"
+    },
+    {
+      "id": "0800-22",
+      "tema": "0800",
+      "nivel": "plata",
+      "enunciado": "El mandato del Diputado del Común es de:",
+      "opciones": [
+        "4 años.",
+        "5 años.",
+        "6 años.",
+        "Vitalicio."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 57.3 indica que será elegida por mayoría de 3/5 partes del Parlamento para un mandato de 5 años.",
+      "referencia": "Art. 57.3 EAC"
+    },
+    {
+      "id": "0800-23",
+      "tema": "0800",
+      "nivel": "oro",
+      "enunciado": "El supremo órgano consultivo de la Comunidad Autónoma de Canarias es:",
+      "opciones": [
+        "El Tribunal Superior de Justicia de Canarias.",
+        "La Audiencia de Cuentas.",
+        "El Consejo Consultivo de Canarias.",
+        "El Consejo de Estado."
+      ],
+      "correcta": 2,
+      "justificacion": "El artículo 58 define al Consejo Consultivo de Canarias como el supremo órgano consultivo.",
+      "referencia": "Art. 58 EAC"
+    },
+    {
+      "id": "0800-24",
+      "tema": "0800",
+      "nivel": "plata",
+      "enunciado": "La institución encargada de la fiscalización externa de la gestión económica, financiera y contable del sector público de Canarias es:",
+      "opciones": [
+        "El Tribunal de Cuentas del Estado.",
+        "La Intervención General.",
+        "El Consejo Consultivo.",
+        "La Audiencia de Cuentas de Canarias."
+      ],
+      "correcta": 3,
+      "justificacion": "El artículo 59 establece que la Audiencia de Cuentas es la dependiente del Parlamento para realizar la fiscalización externa.",
+      "referencia": "Art. 59 EAC"
+    },
+    {
+      "id": "0800-25",
+      "tema": "0800",
+      "nivel": "bronce",
+      "enunciado": "¿Qué órgano de nueva creación en el Estatuto de 2018 tiene como fin el fomento, análisis, control y protección de la transparencia pública y del derecho de acceso a la información?",
+      "opciones": [
+        "La Diputación del Común.",
+        "El Comisionado de Transparencia y Acceso a la Información Pública.",
+        "El Defensor del Ciudadano.",
+        "El Consejo de la Transparencia."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 60 crea el Comisionado de Transparencia y Acceso a la Información Pública.",
+      "referencia": "Art. 60 EAC"
+    },
+    {
+      "id": "0800-26",
+      "tema": "0800",
+      "nivel": "oro",
+      "enunciado": "El órgano judicial en que culmina la organización judicial en Canarias, sin perjuicio de la jurisdicción del Tribunal Supremo, es:",
+      "opciones": [
+        "La Audiencia Provincial de Las Palmas.",
+        "La Audiencia Territorial.",
+        "El Tribunal Constitucional.",
+        "El Tribunal Superior de Justicia de Canarias."
+      ],
+      "correcta": 3,
+      "justificacion": "El artículo 78.1 dispone que el Tribunal Superior de Justicia de Canarias (TSJC) es el órgano en que culmina la organización judicial en las islas.",
+      "referencia": "Art. 78.1 EAC"
+    },
+    {
+      "id": "0800-27",
+      "tema": "0800",
+      "nivel": "bronce",
+      "enunciado": "El Tribunal Superior de Justicia de Canarias tiene su sede en:",
+      "opciones": [
+        "Santa Cruz de Tenerife.",
+        "Las Palmas de Gran Canaria.",
+        "La Laguna.",
+        "Madrid."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 78.5 establece que la sede del TSJC radicará en la ciudad de Las Palmas de Gran Canaria.",
+      "referencia": "Art. 78.5 EAC"
+    },
+    {
+      "id": "0800-28",
+      "tema": "0800",
+      "nivel": "oro",
+      "enunciado": "¿Cómo clasifica el Estatuto de Autonomía de Canarias de 2018 las competencias que puede ejercer la Comunidad Autónoma?",
+      "opciones": [
+        "Básicas, complementarias y subsidiarias.",
+        "Exclusivas, de desarrollo legislativo/ejecución y ejecutivas.",
+        "Estatales y locales.",
+        "Plenas y compartidas."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 94 clasifica las competencias en exclusivas, competencias de desarrollo legislativo y de ejecución, y competencias ejecutivas.",
+      "referencia": "Art. 94 EAC"
+    },
+    {
+      "id": "0800-29",
+      "tema": "0800",
+      "nivel": "plata",
+      "enunciado": "En materias donde Canarias ostenta 'competencias exclusivas', la Comunidad ejerce:",
+      "opciones": [
+        "Solo la función ejecutiva.",
+        "Solo la potestad legislativa.",
+        "La potestad legislativa, la potestad reglamentaria y la función ejecutiva de forma íntegra.",
+        "El desarrollo reglamentario de la normativa básica estatal."
+      ],
+      "correcta": 2,
+      "justificacion": "El artículo 95 establece que en las competencias exclusivas la CAC ejerce de forma íntegra la legislativa, reglamentaria y ejecutiva.",
+      "referencia": "Art. 95 EAC"
+    },
+    {
+      "id": "0800-30",
+      "tema": "0800",
+      "nivel": "plata",
+      "enunciado": "En materia de sanidad interior, ¿qué tipo de competencia ostenta la Comunidad Autónoma de Canarias?",
+      "opciones": [
+        "Competencia exclusiva.",
+        "Competencia de desarrollo legislativo y ejecución de la legislación estatal.",
+        "Competencia puramente ejecutiva.",
+        "Competencia reservada al Estado."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 141.2 otorga competencia de desarrollo legislativo y ejecución de la legislación estatal en materia de sanidad interior.",
+      "referencia": "Art. 141.2 EAC"
+    },
+    {
+      "id": "0800-31",
+      "tema": "0800",
+      "nivel": "oro",
+      "enunciado": "¿Qué mayoría se exige para la reforma del Estatuto de Autonomía de Canarias en el Parlamento de Canarias mediante el procedimiento general?",
+      "opciones": [
+        "Mayoría absoluta.",
+        "Tres quintas partes de sus miembros.",
+        "Dos terceras partes de sus miembros.",
+        "Mayoría simple."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 200.2 exige la aprobación por mayoría de tres quintos (3/5) de los miembros del Parlamento de Canarias.",
+      "referencia": "Art. 200.2 EAC"
+    },
+    {
+      "id": "0800-32",
+      "tema": "0800",
+      "nivel": "plata",
+      "enunciado": "La reforma del Estatuto de Autonomía mediante el procedimiento general culminará necesariamente con:",
+      "opciones": [
+        "Un referéndum vinculante por los electores de Canarias.",
+        "La sola aprobación por el Senado.",
+        "Una consulta al Rey.",
+        "La aprobación de la Diputación del Común."
+      ],
+      "correcta": 0,
+      "justificacion": "El artículo 200 señala que la aprobación requerirá, finalmente, ser sometida a referéndum de los electores en un plazo de 3 meses.",
+      "referencia": "Art. 200.2 y 200.4 EAC"
+    },
+    {
+      "id": "0800-33",
+      "tema": "0800",
+      "nivel": "oro",
+      "enunciado": "¿En qué casos se puede utilizar el procedimiento abreviado de reforma del Estatuto?",
+      "opciones": [
+        "Para cualquier modificación.",
+        "Sólo cuando afecte a las competencias exclusivas.",
+        "Cuando la reforma afectare solo al capítulo II del título I (Derechos y Deberes).",
+        "Cuando afecte a la organización institucional."
+      ],
+      "correcta": 2,
+      "justificacion": "El artículo 201 estipula que se podrá proceder mediante procedimiento abreviado (sin referéndum) cuando la reforma afectare solo al Capítulo II del Título I.",
+      "referencia": "Art. 201 EAC"
+    },
+    {
+      "id": "0800-34",
+      "tema": "0800",
+      "nivel": "bronce",
+      "enunciado": "La sede de la Delegación del Gobierno del Estado en la Comunidad Autónoma de Canarias radica en:",
+      "opciones": [
+        "Santa Cruz de Tenerife.",
+        "San Cristóbal de La Laguna.",
+        "Las Palmas de Gran Canaria.",
+        "Las dos capitales alternativamente."
+      ],
+      "correcta": 2,
+      "justificacion": "La Disposición adicional quinta (y la ley 4/1997) establece que la sede de la Delegación del Gobierno radica en Las Palmas de Gran Canaria.",
+      "referencia": "DA 5ª EAC / Ley 4/1997"
+    },
+    {
+      "id": "0800-35",
+      "tema": "0800",
+      "nivel": "oro",
+      "enunciado": "Según el Decreto 212/1991, de organización de los Departamentos de la Administración Autonómica, los órganos de superior rango jerárquico se clasifican en:",
+      "opciones": [
+        "Viceconsejerías, Secretarías Generales Técnicas y Direcciones Generales.",
+        "Consejeros y Viceconsejeros exclusivamente.",
+        "Cabildos y Direcciones Generales.",
+        "Órganos centrales y órganos territoriales sin diferenciación."
+      ],
+      "correcta": 0,
+      "justificacion": "El artículo 2.2 del D 212/1991 estipula que son órganos superiores las viceconsejerías, las secretarías generales técnicas y las direcciones generales.",
+      "referencia": "Art. 2.2 Decreto 212/1991"
+    },
+    {
+      "id": "0800-36",
+      "tema": "0800",
+      "nivel": "plata",
+      "enunciado": "¿Qué órgano asume la tramitación de expedientes disciplinarios por faltas graves y muy graves del personal de una Consejería (sin implicar separación del servicio)?",
+      "opciones": [
+        "El Director General correspondiente.",
+        "La Secretaría General Técnica del Departamento.",
+        "El Viceconsejero.",
+        "El Consejero de Presidencia."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 15.6.d) del D 212/1991 atribuye a las Secretarías Generales Técnicas la competencia para incoar y resolver dichos expedientes disciplinarios.",
+      "referencia": "Art. 15.6.d) Decreto 212/1991"
+    },
+    {
+      "id": "0800-37",
+      "tema": "0800",
+      "nivel": "oro",
+      "enunciado": "Si un Viceconsejero ejerce la competencia de contratación, ¿hasta qué límite económico puede actuar como órgano de contratación?",
+      "opciones": [
+        "Hasta 500.000 euros.",
+        "Hasta 300.000 euros.",
+        "Hasta 120.000 euros.",
+        "No tienen límite."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 11.3 del D 212/1991 indica que son órganos de contratación hasta el límite de 50 millones de pesetas (aprox. 300.000 euros).",
+      "referencia": "Art. 11.3 Decreto 212/1991"
+    },
+    {
+      "id": "0800-38",
+      "tema": "0800",
+      "nivel": "oro",
+      "enunciado": "¿Y hasta qué límite son órganos de contratación los Secretarios Generales Técnicos y los Directores Generales?",
+      "opciones": [
+        "300.000 euros.",
+        "150.000 euros.",
+        "120.000 euros.",
+        "100.000 euros."
+      ],
+      "correcta": 2,
+      "justificacion": "El artículo 15.8 y 19.3 fijan el límite en 20 millones de pesetas (aprox. 120.000 euros).",
+      "referencia": "Art. 15.8 y 19.3 Decreto 212/1991"
+    },
+    {
+      "id": "0800-39",
+      "tema": "0800",
+      "nivel": "bronce",
+      "enunciado": "Las unidades administrativas de trámite y ejecución de los cometidos de las secciones se denominan:",
+      "opciones": [
+        "Servicios.",
+        "Secciones.",
+        "Negociados.",
+        "Áreas."
+      ],
+      "correcta": 2,
+      "justificacion": "El artículo 25.4 del D 212/1991 establece que los negociados son las unidades de trámite y ejecución de los cometidos de las secciones.",
+      "referencia": "Art. 25.4 Decreto 212/1991"
+    },
+    {
+      "id": "0800-40",
+      "tema": "0800",
+      "nivel": "plata",
+      "enunciado": "El órgano colegiado de dirección política de la Comunidad Autónoma es el Gobierno. Sus decisiones revestirán la forma de Decreto cuando:",
+      "opciones": [
+        "No afecten a terceros.",
+        "Tengan rango de Ley.",
+        "Aprueben disposiciones generales o lo exija el ordenamiento jurídico.",
+        "Lo pida el Vicepresidente."
+      ],
+      "correcta": 2,
+      "justificacion": "El artículo 37.2 de la Ley 4/2023 de Presidencia y Gobierno indica que revestirán la forma de decreto cuando aprueben disposiciones generales o lo exija el ordenamiento.",
+      "referencia": "Art. 37.2 Ley 4/2023"
+    },
+    {
+      "id": "0800-41",
+      "tema": "0800",
+      "nivel": "oro",
+      "enunciado": "Las Secretarías Generales Técnicas tienen un papel clave. Jerárquicamente y dentro del Departamento, de quién dependen directamente:",
+      "opciones": [
+        "De los Viceconsejeros.",
+        "Del Consejero.",
+        "Del Presidente del Gobierno.",
+        "Del Parlamento."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 13.2 del D 212/1991 señala que las secretarías generales técnicas dependen directamente de los consejeros.",
+      "referencia": "Art. 13.2 Decreto 212/1991"
+    },
+    {
+      "id": "0800-42",
+      "tema": "0800",
+      "nivel": "plata",
+      "enunciado": "La potestad de resolver los recursos ordinarios (alzada) interpuestos contra actos dictados por los Directores Generales corresponde a:",
+      "opciones": [
+        "El Secretario General Técnico.",
+        "El Viceconsejero de quien dependan.",
+        "El Consejero exclusivamente.",
+        "El Presidente del Gobierno."
+      ],
+      "correcta": 1,
+      "justificacion": "El Decreto 164/1994 (art 8.c) indica que los Viceconsejeros resuelven los recursos ordinarios interpuestos frente a los actos de los Directores Generales.",
+      "referencia": "Art. 8.c Decreto 164/1994"
+    },
+    {
+      "id": "0800-43",
+      "tema": "0800",
+      "nivel": "plata",
+      "enunciado": "¿Qué norma regula las incompatibilidades de los miembros del Gobierno y altos cargos de la Administración Pública de Canarias?",
+      "opciones": [
+        "Ley 3/1997, de 8 de mayo.",
+        "Decreto 212/1991.",
+        "Ley 4/2023.",
+        "Estatuto de Autonomía de Canarias."
+      ],
+      "correcta": 0,
+      "justificacion": "La Ley 3/1997, de 8 de mayo, de Incompatibilidades de los miembros del Gobierno y altos cargos de la Administración Pública de Canarias.",
+      "referencia": "Ley 3/1997"
+    },
+    {
+      "id": "0800-44",
+      "tema": "0800",
+      "nivel": "oro",
+      "enunciado": "De acuerdo con la Ley de Sedes (4/1997), si el Gobierno de Canarias cuenta con un número IMPAR de Consejerías, ¿cómo se distribuyen las sedes?",
+      "opciones": [
+        "Todas en la misma capital que el Presidente.",
+        "La mitad en Santa Cruz de Tenerife y la otra mitad en Las Palmas de Gran Canaria.",
+        "La mitad por defecto en la capital donde resida el Presidente y el resto en la del Vicepresidente.",
+        "Libremente según disponga el Parlamento."
+      ],
+      "correcta": 2,
+      "justificacion": "El Art. 4.2 de la Ley 4/1997 señala que si el número es impar, en la capital donde resida el Presidente tendrá su sede un número equivalente a la mitad por defecto del total y el resto en la del Vicepresidente.",
+      "referencia": "Art. 4.2 Ley 4/1997"
+    },
+    {
+      "id": "0800-45",
+      "tema": "0800",
+      "nivel": "bronce",
+      "enunciado": "Según la normativa canaria, el personal eventual que ejerza funciones de asesoramiento especial de carácter no permanente:",
+      "opciones": [
+        "Es siempre considerado funcionario de carrera.",
+        "Tiene consideración de Alto Cargo a efectos de incompatibilidades.",
+        "Carece de cualquier restricción de incompatibilidad.",
+        "Sólo rinde cuentas ante el Parlamento."
+      ],
+      "correcta": 1,
+      "justificacion": "El Art. 2 de la Ley 3/1997 de Incompatibilidades especifica que el personal eventual de asesoramiento especial es considerado alto cargo.",
+      "referencia": "Art. 2.c Ley 3/1997"
+    },
+    {
+      "id": "0800-46",
+      "tema": "0800",
+      "nivel": "oro",
+      "enunciado": "De acuerdo con el Estatuto de Autonomía, los Cabildos Insulares:",
+      "opciones": [
+        "Son solo órganos de la Administración Local.",
+        "Son sólo entes consultivos.",
+        "Son instituciones de la Comunidad Autónoma de Canarias y órganos de gobierno, administración y representación de cada isla.",
+        "Están subordinados jerárquicamente a los Ayuntamientos."
+      ],
+      "correcta": 2,
+      "justificacion": "El artículo 65 del EAC indica que los cabildos son instituciones de la Comunidad Autónoma y constituyen órganos de gobierno, representación y administración de cada isla.",
+      "referencia": "Art. 65 EAC"
+    },
+    {
+      "id": "0800-47",
+      "tema": "0800",
+      "nivel": "plata",
+      "enunciado": "El órgano colegiado que reúne a los Jefes de los Cabildos y al Presidente de Canarias para servir de encuentro y debate de asuntos de interés común se denomina:",
+      "opciones": [
+        "Conferencia de Presidentes.",
+        "Federación Canaria de Islas (FECAI).",
+        "Parlamento Insular.",
+        "Comisión Mixta."
+      ],
+      "correcta": 0,
+      "justificacion": "El artículo 74 del EAC crea la Conferencia de Presidentes como foro institucional de colaboración.",
+      "referencia": "Art. 74 EAC"
+    },
+    {
+      "id": "0800-48",
+      "tema": "0800",
+      "nivel": "oro",
+      "enunciado": "¿Qué mayoría se exige para la convalidación de un Decreto Ley por el Parlamento de Canarias?",
+      "opciones": [
+        "Mayoría absoluta.",
+        "Mayoría simple.",
+        "Mayoría de tres quintos.",
+        "No pueden convalidarse."
+      ],
+      "correcta": 1,
+      "justificacion": "La convalidación o derogación de los decretos-leyes (art. 46 EAC) se somete al debate de la totalidad, bastando mayoría simple para su aprobación (al igual que a nivel estatal).",
+      "referencia": "Art. 46 EAC / Régimen de mayorías"
+    },
+    {
+      "id": "0800-49",
+      "tema": "0800",
+      "nivel": "plata",
+      "enunciado": "Los Reglamentos Orgánicos de las Consejerías del Gobierno de Canarias son aprobados por:",
+      "opciones": [
+        "Orden del Consejero respectivo.",
+        "Decreto del Presidente.",
+        "Decreto del Gobierno.",
+        "Ley del Parlamento."
+      ],
+      "correcta": 2,
+      "justificacion": "El artículo 33 del Decreto 212/1991 establece que los reglamentos orgánicos se aprueban por Decreto del Gobierno, a propuesta conjunta de la Consejería afectada y de Presidencia.",
+      "referencia": "Art. 33 Decreto 212/1991"
+    },
+    {
+      "id": "0800-50",
+      "tema": "0800",
+      "nivel": "oro",
+      "enunciado": "En la vía administrativa autonómica (Decreto 164/1994), causan estado y ponen fin a la vía administrativa en MATERIA DE PERSONAL los actos adoptados por:",
+      "opciones": [
+        "Los Directores Generales.",
+        "Los Directores Territoriales.",
+        "Los Secretarios Generales Técnicos.",
+        "Los Jefes de Servicio."
+      ],
+      "correcta": 2,
+      "justificacion": "El artículo 8.d) del D 164/1994 y el 16.2 del 212/1991 indican que causan estado en vía administrativa los actos de los Secretarios Generales Técnicos en materia de personal.",
+      "referencia": "Art. 8.d Decreto 164/1994 / Art. 16.2 D 212/1991"
+    }
+  ]
+};
+
+fs.writeFileSync(path.join(__dirname, 'src/data/tema0800.json'), JSON.stringify(tema0800, null, 2), 'utf8');
+console.log('tema0800.json creado con 50 preguntas.');

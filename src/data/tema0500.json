@@ -1,0 +1,756 @@
+{
+  "tema_id": "0500",
+  "tema_nombre": "Unión Europea",
+  "preguntas": [
+    {
+      "id": "0500-01",
+      "tema": "0500",
+      "nivel": "oro",
+      "enunciado": "¿Qué Estado miembro salió oficialmente de la Unión Europea el 31 de enero de 2020?",
+      "opciones": [
+        "Irlanda.",
+        "Noruega.",
+        "Reino Unido.",
+        "Suecia."
+      ],
+      "correcta": 2,
+      "justificacion": "El Reino Unido tuvo un referéndum de salida el 24 de junio de 2016 y su salida se hizo oficial el 31 de enero de 2020.",
+      "referencia": "Países miembros de la UE"
+    },
+    {
+      "id": "0500-02",
+      "tema": "0500",
+      "nivel": "plata",
+      "enunciado": "¿Cuál fue el último país en adherirse a la Unión Europea en el año 2013?",
+      "opciones": [
+        "Eslovenia.",
+        "Rumanía.",
+        "Bulgaria.",
+        "Croacia."
+      ],
+      "correcta": 3,
+      "justificacion": "Croacia fue el último país en adherirse a la Unión Europea, haciéndolo efectivo en 2013.",
+      "referencia": "Países miembros de la UE"
+    },
+    {
+      "id": "0500-03",
+      "tema": "0500",
+      "nivel": "oro",
+      "enunciado": "La Unión Europea se fundamenta en dos Tratados con el mismo valor jurídico, que son:",
+      "opciones": [
+        "El Tratado de Maastricht y el Tratado de Ámsterdam.",
+        "La Carta de los Derechos Fundamentales y el Tratado de Lisboa.",
+        "El Tratado de la Unión Europea y el Tratado de Funcionamiento de la Unión Europea.",
+        "El Tratado de París y el Tratado de Roma."
+      ],
+      "correcta": 2,
+      "justificacion": "El artículo 1 del TUE establece que la Unión se fundamenta en el Tratado de la Unión Europea (TUE) y en el Tratado de Funcionamiento de la Unión Europea (TFUE).",
+      "referencia": "Art. 1 TUE"
+    },
+    {
+      "id": "0500-04",
+      "tema": "0500",
+      "nivel": "oro",
+      "enunciado": "El principio por el cual la Unión Europea intervendrá en ámbitos que no sean de su competencia exclusiva sólo cuando los objetivos no puedan ser alcanzados de manera suficiente por los Estados miembros, se denomina:",
+      "opciones": [
+        "Principio de proporcionalidad.",
+        "Principio de primacía.",
+        "Principio de atribución.",
+        "Principio de subsidiariedad."
+      ],
+      "correcta": 3,
+      "justificacion": "El principio de subsidiariedad regula que la UE sólo actúa si el objetivo se puede alcanzar mejor a escala de la Unión que a nivel nacional, regional o local.",
+      "referencia": "Art. 5.3 TUE"
+    },
+    {
+      "id": "0500-05",
+      "tema": "0500",
+      "nivel": "oro",
+      "enunciado": "El principio que establece que en caso de conflicto entre la normativa europea y la normativa interna de un Estado miembro prevalece la normativa europea, se denomina:",
+      "opciones": [
+        "Principio de proporcionalidad.",
+        "Principio de primacía.",
+        "Principio de subsidiariedad.",
+        "Principio de efecto directo."
+      ],
+      "correcta": 1,
+      "justificacion": "El principio de primacía consagra la superioridad del Derecho de la Unión sobre el Derecho nacional de los Estados miembros en caso de conflicto.",
+      "referencia": "Principios de la UE"
+    },
+    {
+      "id": "0500-06",
+      "tema": "0500",
+      "nivel": "oro",
+      "enunciado": "¿En cuál de los siguientes ámbitos dispone la Unión Europea de competencia exclusiva?",
+      "opciones": [
+        "El medio ambiente.",
+        "La agricultura y la pesca.",
+        "La cohesión económica, social y territorial.",
+        "La política comercial común."
+      ],
+      "correcta": 3,
+      "justificacion": "Según el artículo 3 del TFUE, la UE tiene competencia exclusiva en materias como la unión aduanera, el establecimiento de normas sobre competencia, política monetaria (países euro), conservación de recursos pesqueros y política comercial común.",
+      "referencia": "Art. 3 TFUE"
+    },
+    {
+      "id": "0500-07",
+      "tema": "0500",
+      "nivel": "plata",
+      "enunciado": "La ciudadanía de la Unión Europea da derecho a ser elector y elegible en las elecciones al Parlamento Europeo y en:",
+      "opciones": [
+        "Las elecciones autonómicas del territorio en el que residan.",
+        "Las elecciones generales del Estado en el que residan.",
+        "Las elecciones municipales del Estado miembro en el que residan.",
+        "Cualquier tipo de elección que se celebre en la Unión."
+      ],
+      "correcta": 2,
+      "justificacion": "Los ciudadanos de la Unión tienen derecho a sufragio activo y pasivo en las elecciones al Parlamento Europeo y en las municipales del Estado donde residan.",
+      "referencia": "Art. 20 TFUE"
+    },
+    {
+      "id": "0500-08",
+      "tema": "0500",
+      "nivel": "oro",
+      "enunciado": "Según el artículo 13 del TUE, ¿cuál de los siguientes órganos NO tiene el rango de Institución de la Unión Europea?",
+      "opciones": [
+        "El Consejo Europeo.",
+        "El Banco Central Europeo.",
+        "El Tribunal de Cuentas.",
+        "El Comité Económico y Social."
+      ],
+      "correcta": 3,
+      "justificacion": "El Comité Económico y Social es un órgano consultivo, no una Institución. Las Instituciones son 7: Parlamento Europeo, Consejo Europeo, Consejo, Comisión Europea, Tribunal de Justicia, Banco Central Europeo y Tribunal de Cuentas.",
+      "referencia": "Art. 13 TUE"
+    },
+    {
+      "id": "0500-09",
+      "tema": "0500",
+      "nivel": "plata",
+      "enunciado": "El mandato de los diputados del Parlamento Europeo se establece por un período de:",
+      "opciones": [
+        "5 años.",
+        "4 años.",
+        "2,5 años.",
+        "6 años."
+      ],
+      "correcta": 0,
+      "justificacion": "Los diputados del Parlamento Europeo son elegidos por sufragio universal directo para un mandato de 5 años.",
+      "referencia": "Parlamento Europeo"
+    },
+    {
+      "id": "0500-10",
+      "tema": "0500",
+      "nivel": "oro",
+      "enunciado": "Tras las elecciones de 2024, el número máximo de miembros del Parlamento Europeo, excluyendo al Presidente, es de:",
+      "opciones": [
+        "750",
+        "719",
+        "705",
+        "751"
+      ],
+      "correcta": 1,
+      "justificacion": "El número de miembros no excederá de 750 más el Presidente. Actualmente son 720 incluido el presidente, por tanto, son 719 diputados más el Presidente.",
+      "referencia": "Parlamento Europeo (Composición)"
+    },
+    {
+      "id": "0500-11",
+      "tema": "0500",
+      "nivel": "bronce",
+      "enunciado": "La sede oficial del Parlamento Europeo, donde se celebran los plenos mensuales, se encuentra en:",
+      "opciones": [
+        "La Haya.",
+        "Estrasburgo.",
+        "Bruselas.",
+        "Luxemburgo."
+      ],
+      "correcta": 1,
+      "justificacion": "La sede oficial está en Estrasburgo (Francia), aunque las reuniones de las comisiones y plenos adicionales se hacen en Bruselas, y su Secretaría General está en Luxemburgo.",
+      "referencia": "Parlamento Europeo (Sede)"
+    },
+    {
+      "id": "0500-12",
+      "tema": "0500",
+      "nivel": "oro",
+      "enunciado": "La Institución que da a la Unión Europea los impulsos necesarios para su desarrollo y define sus orientaciones y prioridades políticas generales, sin ejercer función legislativa, es:",
+      "opciones": [
+        "La Comisión Europea.",
+        "El Parlamento Europeo.",
+        "El Consejo Europeo.",
+        "El Consejo."
+      ],
+      "correcta": 2,
+      "justificacion": "El Consejo Europeo reúne a los Jefes de Estado o de Gobierno, y es el órgano que marca el rumbo político de la UE sin legislar.",
+      "referencia": "Art. 15 TUE"
+    },
+    {
+      "id": "0500-13",
+      "tema": "0500",
+      "nivel": "plata",
+      "enunciado": "El Consejo Europeo está compuesto por:",
+      "opciones": [
+        "Los eurodiputados elegidos por cada país, aplicándose de forma supletoria el régimen general de procedimiento administrativo.",
+        "Los Jefes de Estado o de Gobierno, su Presidente y el Presidente de la Comisión.",
+        "Un ministro de cada Estado miembro, atendiendo a los principios de proporcionalidad, eficiencia y jerarquía normativa.",
+        "27 comisarios, uno por cada Estado miembro, previo acuerdo favorable del órgano general de coordinación asistencial o técnica."
+      ],
+      "correcta": 1,
+      "justificacion": "Se compone de los Jefes de Estado o de Gobierno de los Estados miembros, así como por su Presidente y por el Presidente de la Comisión. Participa también el Alto Representante.",
+      "referencia": "Art. 15 TUE"
+    },
+    {
+      "id": "0500-14",
+      "tema": "0500",
+      "nivel": "plata",
+      "enunciado": "El Presidente del Consejo Europeo es elegido para un mandato de:",
+      "opciones": [
+        "6 meses (presidencia rotatoria).",
+        "2,5 años, renovable una sola vez.",
+        "4 años.",
+        "5 años, no renovable."
+      ],
+      "correcta": 1,
+      "justificacion": "El Consejo Europeo elige a su Presidente por mayoría cualificada por un mandato de dos años y medio, renovable una sola vez.",
+      "referencia": "Art. 15 TUE"
+    },
+    {
+      "id": "0500-15",
+      "tema": "0500",
+      "nivel": "oro",
+      "enunciado": "¿Qué dos instituciones ejercen conjuntamente la función legislativa y presupuestaria en la Unión Europea?",
+      "opciones": [
+        "El Consejo y la Comisión.",
+        "El Consejo Europeo y la Comisión.",
+        "El Parlamento Europeo y la Comisión.",
+        "El Parlamento Europeo y el Consejo."
+      ],
+      "correcta": 3,
+      "justificacion": "El Parlamento Europeo y el Consejo de la Unión Europea ejercen conjuntamente las funciones legislativa y presupuestaria.",
+      "referencia": "Art. 14 y 16 TUE"
+    },
+    {
+      "id": "0500-16",
+      "tema": "0500",
+      "nivel": "plata",
+      "enunciado": "El Consejo de la Unión Europea (o simplemente el Consejo) está presidido de forma:",
+      "opciones": [
+        "Vitalicia por el Estado más poblado.",
+        "Rotatoria cada 6 meses por los Estados miembros.",
+        "Electiva por un período de 2,5 años.",
+        "Compartida por tres países durante 5 años."
+      ],
+      "correcta": 1,
+      "justificacion": "La Presidencia de las formaciones del Consejo (salvo Asuntos Exteriores) es rotatoria entre los Estados miembros cada 6 meses.",
+      "referencia": "El Consejo (Presidencia)"
+    },
+    {
+      "id": "0500-17",
+      "tema": "0500",
+      "nivel": "oro",
+      "enunciado": "La Institución que ostenta el monopolio de la iniciativa legislativa de los actos de la Unión es:",
+      "opciones": [
+        "El Parlamento Europeo.",
+        "La Comisión Europea.",
+        "El Consejo Europeo.",
+        "El Tribunal de Justicia."
+      ],
+      "correcta": 1,
+      "justificacion": "Salvo que los Tratados dispongan otra cosa, los actos legislativos sólo podrán adoptarse a propuesta de la Comisión Europea.",
+      "referencia": "Art. 17 TUE"
+    },
+    {
+      "id": "0500-18",
+      "tema": "0500",
+      "nivel": "oro",
+      "enunciado": "La Comisión Europea está compuesta actualmente por:",
+      "opciones": [
+        "15 miembros elegidos entre los países más poblados.",
+        "Un número de miembros correspondiente a dos tercios de los Estados miembros.",
+        "27 miembros (uno por cada Estado miembro).",
+        "720 miembros."
+      ],
+      "correcta": 2,
+      "justificacion": "La Comisión está compuesta por un nacional de cada Estado miembro (27 en total actualmente), incluyendo su Presidente y el Alto Representante.",
+      "referencia": "Composición Comisión"
+    },
+    {
+      "id": "0500-19",
+      "tema": "0500",
+      "nivel": "plata",
+      "enunciado": "El Alto Representante de la Unión para Asuntos Exteriores y Política de Seguridad es a su vez uno de los vicepresidentes natos de:",
+      "opciones": [
+        "El Parlamento Europeo.",
+        "La Comisión Europea.",
+        "El Consejo Europeo.",
+        "El Consejo de la Unión Europea."
+      ],
+      "correcta": 1,
+      "justificacion": "El Alto Representante es también Vicepresidente nato de la Comisión Europea, además de presidir el Consejo de Asuntos Exteriores.",
+      "referencia": "Alto Representante"
+    },
+    {
+      "id": "0500-20",
+      "tema": "0500",
+      "nivel": "bronce",
+      "enunciado": "¿Dónde tiene su sede el Tribunal de Justicia de la Unión Europea?",
+      "opciones": [
+        "Bruselas.",
+        "La Haya.",
+        "Luxemburgo.",
+        "Estrasburgo."
+      ],
+      "correcta": 2,
+      "justificacion": "La sede del Tribunal de Justicia de la UE se encuentra en Luxemburgo.",
+      "referencia": "Sede TJUE"
+    },
+    {
+      "id": "0500-21",
+      "tema": "0500",
+      "nivel": "plata",
+      "enunciado": "El Tribunal de Justicia de la Unión Europea (TJUE) está compuesto por:",
+      "opciones": [
+        "15 jueces y 15 abogados generales.",
+        "Un juez por Estado miembro y 11 abogados generales.",
+        "Un juez por Estado miembro, sin abogados generales.",
+        "Dos jueces por Estado miembro y 8 abogados generales."
+      ],
+      "correcta": 1,
+      "justificacion": "El TJUE está compuesto por un juez por cada Estado miembro (27) y asistido por 11 abogados generales, con mandato de 6 años renovables.",
+      "referencia": "Composición TJUE"
+    },
+    {
+      "id": "0500-22",
+      "tema": "0500",
+      "nivel": "oro",
+      "enunciado": "El objetivo principal del Sistema Europeo de Bancos Centrales (SEBC) y del Banco Central Europeo es:",
+      "opciones": [
+        "Financiar proyectos de inversión en regiones desfavorecidas.",
+        "Mantener la estabilidad de precios.",
+        "Establecer la política fiscal común.",
+        "Reducir la tasa de desempleo en Europa."
+      ],
+      "correcta": 1,
+      "justificacion": "El objetivo fundamental del SEBC y del Banco Central Europeo es mantener la estabilidad de precios (control de la inflación).",
+      "referencia": "Banco Central Europeo"
+    },
+    {
+      "id": "0500-23",
+      "tema": "0500",
+      "nivel": "plata",
+      "enunciado": "Los miembros del Tribunal de Cuentas de la Unión Europea son nombrados por el Consejo para un período de:",
+      "opciones": [
+        "9 años, no renovables.",
+        "5 años.",
+        "6 años, renovables.",
+        "4 años."
+      ],
+      "correcta": 2,
+      "justificacion": "Los 27 miembros del Tribunal de Cuentas tienen un mandato de 6 años, renovables.",
+      "referencia": "Tribunal de Cuentas"
+    },
+    {
+      "id": "0500-24",
+      "tema": "0500",
+      "nivel": "bronce",
+      "enunciado": "¿Qué función tienen el Comité Económico y Social y el Comité de las Regiones en la arquitectura de la UE?",
+      "opciones": [
+        "Función ejecutiva.",
+        "Función jurisdiccional.",
+        "Función legislativa.",
+        "Función consultiva."
+      ],
+      "correcta": 3,
+      "justificacion": "Ambos comités asisten al Parlamento Europeo, al Consejo y a la Comisión ejerciendo funciones estrictamente consultivas.",
+      "referencia": "Comités consultivos"
+    },
+    {
+      "id": "0500-25",
+      "tema": "0500",
+      "nivel": "oro",
+      "enunciado": "En el Derecho derivado de la UE, la norma que es obligatoria en todos sus elementos y directamente aplicable en cada Estado miembro sin necesidad de transposición es:",
+      "opciones": [
+        "La Decisión.",
+        "El Dictamen.",
+        "El Reglamento.",
+        "La Directiva."
+      ],
+      "correcta": 2,
+      "justificacion": "El Reglamento tiene alcance general, es obligatorio en todos sus elementos y directamente aplicable, no precisando de normas de transposición.",
+      "referencia": "Derecho Derivado (Reglamento)"
+    },
+    {
+      "id": "0500-26",
+      "tema": "0500",
+      "nivel": "oro",
+      "enunciado": "¿Qué instrumento normativo obliga al Estado miembro en cuanto al resultado, dejando a las autoridades nacionales la elección de la forma y de los medios (requiere transposición)?",
+      "opciones": [
+        "El Dictamen.",
+        "La Recomendación.",
+        "La Directiva.",
+        "El Reglamento."
+      ],
+      "correcta": 2,
+      "justificacion": "La Directiva obliga en cuanto al resultado que debe conseguirse, pero deja a los Estados la elección de la forma y los medios mediante la correspondiente transposición.",
+      "referencia": "Derecho Derivado (Directiva)"
+    },
+    {
+      "id": "0500-27",
+      "tema": "0500",
+      "nivel": "plata",
+      "enunciado": "Respecto a los actos del derecho derivado de la UE, ¿cuáles NO son jurídicamente vinculantes?",
+      "opciones": [
+        "Recomendaciones y Dictámenes.",
+        "Directivas y Recomendaciones.",
+        "Reglamentos y Directivas.",
+        "Decisiones y Reglamentos."
+      ],
+      "correcta": 0,
+      "justificacion": "El artículo 288 del TFUE especifica claramente que las recomendaciones y los dictámenes no son vinculantes.",
+      "referencia": "Derecho Derivado"
+    },
+    {
+      "id": "0500-28",
+      "tema": "0500",
+      "nivel": "oro",
+      "enunciado": "El artículo 349 del TFUE otorga un estatuto especial a ciertos territorios alejados geográfica y económicamente. Se les conoce como:",
+      "opciones": [
+        "Regiones Ultraperiféricas (RUP).",
+        "Países y Territorios de Ultramar (PTU).",
+        "Zonas francas europeas.",
+        "Regiones insulares periféricas."
+      ],
+      "correcta": 0,
+      "justificacion": "Canarias, junto a otros territorios de Francia y Portugal, ostenta el estatus de Región Ultraperiférica (RUP) en la UE.",
+      "referencia": "Canarias en la UE (Art 349 TFUE)"
+    },
+    {
+      "id": "0500-29",
+      "tema": "0500",
+      "nivel": "plata",
+      "enunciado": "La Delegación del Gobierno de Canarias en Bruselas tiene como función principal:",
+      "opciones": [
+        "Recaudar fondos estructurales de la Unión Europea directamente, en los términos legalmente fijados para las corporaciones de derecho público y privado.",
+        "Hacer el análisis, seguimiento y gestiones de las políticas europeas en defensa de los intereses de Canarias.",
+        "Ejercer el derecho a veto en el Consejo de la Unión Europea.",
+        "Aprobar la transposición de las Directivas en el Archipiélago, salvo que una norma con rango constitucional o legal disponga expresamente lo contrario."
+      ],
+      "correcta": 1,
+      "justificacion": "Su función es actuar como órgano de relación, información y seguimiento de los asuntos e intereses de la Comunidad Autónoma ante las instituciones comunitarias.",
+      "referencia": "Delegación Canarias Bruselas"
+    },
+    {
+      "id": "0500-30",
+      "tema": "0500",
+      "nivel": "plata",
+      "enunciado": "En la jerarquía normativa comunitaria, los Tratados Fundacionales y sus modificaciones constituyen:",
+      "opciones": [
+        "La Legislación Supletoria.",
+        "El Derecho Complementario.",
+        "El Derecho Originario.",
+        "El Derecho Derivado."
+      ],
+      "correcta": 2,
+      "justificacion": "Los tratados constitutivos forman el Derecho Originario (o primario), que es el fundamento constitucional y prevalece sobre cualquier otra norma derivada.",
+      "referencia": "Derecho Comunitario Originario"
+    },
+    {
+      "id": "0500-31",
+      "tema": "0500",
+      "nivel": "oro",
+      "enunciado": "Como regla general, ¿cómo adopta sus decisiones el Consejo Europeo?",
+      "opciones": [
+        "Por mayoría cualificada.",
+        "Por mayoría absoluta.",
+        "Por mayoría simple.",
+        "Por consenso."
+      ],
+      "correcta": 3,
+      "justificacion": "El Consejo Europeo se pronunciará por consenso, excepto cuando los Tratados dispongan otra cosa.",
+      "referencia": "Art. 15 TUE (Mayorías)"
+    },
+    {
+      "id": "0500-32",
+      "tema": "0500",
+      "nivel": "plata",
+      "enunciado": "¿Qué mayoría se exige en el Consejo Europeo para elegir a su Presidente?",
+      "opciones": [
+        "Consenso.",
+        "Mayoría simple.",
+        "Mayoría cualificada.",
+        "Mayoría absoluta."
+      ],
+      "correcta": 2,
+      "justificacion": "El Consejo Europeo elegirá a su Presidente por mayoría cualificada para un mandato de 2,5 años.",
+      "referencia": "Art. 15 TUE (Mayorías)"
+    },
+    {
+      "id": "0500-33",
+      "tema": "0500",
+      "nivel": "oro",
+      "enunciado": "Salvo disposición en contrario de los Tratados, el Parlamento Europeo decidirá por:",
+      "opciones": [
+        "Mayoría absoluta de sus miembros.",
+        "Mayoría cualificada.",
+        "Mayoría de los votos emitidos.",
+        "Consenso."
+      ],
+      "correcta": 2,
+      "justificacion": "El artículo 231 del TFUE establece que el Parlamento Europeo decidirá por mayoría de los votos emitidos.",
+      "referencia": "Art. 231 TFUE"
+    },
+    {
+      "id": "0500-34",
+      "tema": "0500",
+      "nivel": "oro",
+      "enunciado": "Para que se apruebe una moción de censura en el Parlamento Europeo contra la Comisión, se requiere:",
+      "opciones": [
+        "Unanimidad, siempre que se acredite el cumplimiento de los requisitos formales exigidos por la ley.",
+        "Dos tercios de los votos emitidos que representen la mayoría de los diputados.",
+        "Mayoría simple de los diputados que componen el Parlamento.",
+        "Mayoría absoluta de los votos emitidos, aplicándose de forma supletoria el régimen general de procedimiento administrativo."
+      ],
+      "correcta": 1,
+      "justificacion": "Se requiere mayoría de dos tercios de los votos emitidos que representen, a su vez, la mayoría de los diputados que componen el Parlamento Europeo.",
+      "referencia": "Art. 234 TFUE"
+    },
+    {
+      "id": "0500-35",
+      "tema": "0500",
+      "nivel": "plata",
+      "enunciado": "En el Consejo (de la Unión Europea), la regla general para la toma de decisiones, a partir del 1 de noviembre de 2014, es:",
+      "opciones": [
+        "El consenso.",
+        "La mayoría cualificada.",
+        "La mayoría absoluta.",
+        "La unanimidad."
+      ],
+      "correcta": 1,
+      "justificacion": "El Consejo se pronunciará por mayoría cualificada, excepto cuando los Tratados dispongan otra cosa.",
+      "referencia": "Art. 16 TUE"
+    },
+    {
+      "id": "0500-36",
+      "tema": "0500",
+      "nivel": "plata",
+      "enunciado": "¿Cómo se define la mayoría cualificada en el Consejo?",
+      "opciones": [
+        "Mínimo del 55% de los miembros del Consejo que representen al 65% de la población de la Unión.",
+        "Mínimo del 65% de los miembros que representen el 55% de la población.",
+        "Mínimo del 50% de los miembros que representen el 50% de la población.",
+        "Mínimo del 75% de los miembros que representen el 65% de la población."
+      ],
+      "correcta": 0,
+      "justificacion": "Se alcanza con un mínimo del 55% de los Estados miembros (15 de 27) que representen al menos el 65% de la población total de la UE.",
+      "referencia": "Mayoría cualificada en el Consejo"
+    },
+    {
+      "id": "0500-37",
+      "tema": "0500",
+      "nivel": "bronce",
+      "enunciado": "¿Por qué mayoría aprueba el Consejo de la Unión Europea la composición del Comité Económico y Social y el Comité de las Regiones?",
+      "opciones": [
+        "Unanimidad.",
+        "Mayoría simple.",
+        "Mayoría cualificada.",
+        "Mayoría absoluta."
+      ],
+      "correcta": 0,
+      "justificacion": "Tanto el Comité Económico y Social como el Comité de las Regiones (máx. 350 miembros cada uno) son nombrados por el Consejo por unanimidad, a propuesta de la Comisión.",
+      "referencia": "Art. 301 y 305 TFUE"
+    },
+    {
+      "id": "0500-38",
+      "tema": "0500",
+      "nivel": "oro",
+      "enunciado": "El procedimiento legislativo ordinario de la Unión Europea consiste en la adopción conjunta de actos jurídicos por parte de:",
+      "opciones": [
+        "El Parlamento Europeo y el Consejo, a propuesta de la Comisión.",
+        "La Comisión y el Consejo Europeo, a propuesta del Parlamento.",
+        "El Parlamento Europeo y la Comisión, a propuesta del Consejo.",
+        "El Consejo Europeo y el Consejo, a propuesta de la Comisión."
+      ],
+      "correcta": 0,
+      "justificacion": "Conocido coloquialmente como 'Codecisión', consiste en la adopción conjunta por el Parlamento Europeo y el Consejo, a propuesta de la Comisión.",
+      "referencia": "Art. 289 TFUE"
+    },
+    {
+      "id": "0500-39",
+      "tema": "0500",
+      "nivel": "plata",
+      "enunciado": "El Tratado de Lisboa otorgó el mismo valor jurídico que a los Tratados a:",
+      "opciones": [
+        "Los Reglamentos de la Comisión Europea.",
+        "El Tratado Constitutivo de la Comunidad Europea del Carbón y del Acero.",
+        "El Convenio Europeo de Derechos Humanos.",
+        "La Carta de los Derechos Fundamentales de la Unión Europea."
+      ],
+      "correcta": 3,
+      "justificacion": "El Tratado de Lisboa reconoce a la Carta de los Derechos Fundamentales de la Unión Europea el mismo valor jurídico que a los Tratados.",
+      "referencia": "Derecho Comunitario Originario"
+    },
+    {
+      "id": "0500-40",
+      "tema": "0500",
+      "nivel": "oro",
+      "enunciado": "¿Cuál de los siguientes NO es un acto legislativo vinculante en el derecho de la Unión Europea?",
+      "opciones": [
+        "El Reglamento.",
+        "La Recomendación.",
+        "La Decisión.",
+        "La Directiva."
+      ],
+      "correcta": 1,
+      "justificacion": "Las recomendaciones y los dictámenes no son vinculantes, mientras que los reglamentos, las directivas y las decisiones sí lo son.",
+      "referencia": "Art. 288 TFUE"
+    },
+    {
+      "id": "0500-41",
+      "tema": "0500",
+      "nivel": "oro",
+      "enunciado": "La institución comunitaria que ejerce la función ejecutiva y vela por la aplicación de los Tratados es:",
+      "opciones": [
+        "La Comisión Europea.",
+        "El Tribunal de Cuentas.",
+        "El Parlamento Europeo.",
+        "El Consejo de la Unión Europea."
+      ],
+      "correcta": 0,
+      "justificacion": "La Comisión Europea es el órgano ejecutivo de la UE. Promueve el interés general, vela por la aplicación de los tratados y gestiona los programas.",
+      "referencia": "La Comisión Europea"
+    },
+    {
+      "id": "0500-42",
+      "tema": "0500",
+      "nivel": "bronce",
+      "enunciado": "¿Qué institución prepara los trabajos del Consejo (de la UE)?",
+      "opciones": [
+        "La Comisión.",
+        "El COREPER.",
+        "La Secretaría General del Parlamento.",
+        "El Consejo Europeo."
+      ],
+      "correcta": 1,
+      "justificacion": "El Comité de Representantes Permanentes (COREPER) se encarga de preparar los trabajos del Consejo y de realizar las tareas que este le confíe.",
+      "referencia": "COREPER"
+    },
+    {
+      "id": "0500-43",
+      "tema": "0500",
+      "nivel": "plata",
+      "enunciado": "Las decisiones del Consejo Europeo para proponer un candidato al cargo de Presidente de la Comisión se toman por:",
+      "opciones": [
+        "Unanimidad.",
+        "Consenso.",
+        "Mayoría simple.",
+        "Mayoría cualificada."
+      ],
+      "correcta": 3,
+      "justificacion": "El Consejo Europeo propondrá al Parlamento Europeo un candidato a Presidente de la Comisión por mayoría cualificada.",
+      "referencia": "Nombramiento Presidente Comisión"
+    },
+    {
+      "id": "0500-44",
+      "tema": "0500",
+      "nivel": "plata",
+      "enunciado": "En relación a las Directivas europeas, es correcto afirmar que:",
+      "opciones": [
+        "Son obligatorias en todos sus elementos y directamente aplicables, en virtud de lo preceptuado para las administraciones territoriales del sector público.",
+        "Son actos normativos adoptados exclusivamente por el Tribunal de Justicia, aplicándose de forma supletoria el régimen general de procedimiento administrativo.",
+        "No tienen carácter vinculante, atendiendo a los principios de proporcionalidad, eficiencia y jerarquía normativa.",
+        "Obligan al Estado miembro en cuanto al resultado, dejando a las autoridades nacionales la elección de los medios."
+      ],
+      "correcta": 3,
+      "justificacion": "La Directiva obliga al Estado miembro destinatario en cuanto al resultado que debe conseguirse, pero le deja libertad para elegir la forma y los medios (requiere transposición).",
+      "referencia": "Art. 288 TFUE"
+    },
+    {
+      "id": "0500-45",
+      "tema": "0500",
+      "nivel": "oro",
+      "enunciado": "¿Cuál es la función principal del Tribunal de Cuentas de la Unión Europea?",
+      "opciones": [
+        "Aprobar el Presupuesto General de la UE.",
+        "Fiscalizar o controlar las cuentas de la Unión.",
+        "Dictar sentencias en recursos de casación contra Tribunales Nacionales.",
+        "Controlar la legalidad de los actos del Consejo y del Parlamento."
+      ],
+      "correcta": 1,
+      "justificacion": "El Tribunal de Cuentas realiza la fiscalización de las cuentas de la Unión, comprobando la legalidad y regularidad de los ingresos y gastos.",
+      "referencia": "Tribunal de Cuentas"
+    },
+    {
+      "id": "0500-46",
+      "tema": "0500",
+      "nivel": "bronce",
+      "enunciado": "¿Cuál de estos órganos consultivos de la UE representa a las organizaciones sociales e industriales?",
+      "opciones": [
+        "El Comité de las Regiones.",
+        "El COREPER.",
+        "El Defensor del Pueblo Europeo.",
+        "El Comité Económico y Social."
+      ],
+      "correcta": 3,
+      "justificacion": "El Comité Económico y Social representa a las organizaciones de empresarios, de trabajadores y a otros sectores representativos de la sociedad civil.",
+      "referencia": "Comité Económico y Social"
+    },
+    {
+      "id": "0500-47",
+      "tema": "0500",
+      "nivel": "plata",
+      "enunciado": "La política monetaria de los Estados miembros cuya moneda es el euro (Eurosistema) es competencia de:",
+      "opciones": [
+        "El Banco Central Europeo.",
+        "El Parlamento Europeo.",
+        "El Consejo Europeo.",
+        "La Comisión Europea."
+      ],
+      "correcta": 0,
+      "justificacion": "El BCE y los bancos centrales nacionales de los Estados cuya moneda es el euro constituyen el Eurosistema, el cual dirige la política monetaria de la Unión.",
+      "referencia": "Banco Central Europeo"
+    },
+    {
+      "id": "0500-48",
+      "tema": "0500",
+      "nivel": "oro",
+      "enunciado": "El Defensor del Pueblo Europeo está facultado para recibir las reclamaciones relativas a:",
+      "opciones": [
+        "Casos de mala administración en la acción de las instituciones de la Unión, con exclusión del Tribunal de Justicia.",
+        "Cualquier actuación de los Gobiernos nacionales de los Estados miembros, siempre que se acredite el cumplimiento de los requisitos formales exigidos por la ley.",
+        "Mala administración exclusiva de la Comisión Europea, aplicándose de forma supletoria el régimen general de procedimiento administrativo.",
+        "Decisiones judiciales de los tribunales de primera instancia de España, en los términos legalmente fijados para las corporaciones de derecho público y privado."
+      ],
+      "correcta": 0,
+      "justificacion": "Investiga casos de mala administración en la acción de las instituciones, órganos u organismos de la Unión, excepto el Tribunal de Justicia en el ejercicio de sus funciones jurisdiccionales.",
+      "referencia": "Defensor del Pueblo Europeo"
+    },
+    {
+      "id": "0500-49",
+      "tema": "0500",
+      "nivel": "plata",
+      "enunciado": "El Tratado que eliminó la estructura de los 'tres pilares' y otorgó personalidad jurídica única a la Unión Europea fue:",
+      "opciones": [
+        "El Tratado de Niza.",
+        "El Tratado de Ámsterdam.",
+        "El Tratado de Roma.",
+        "El Tratado de Lisboa."
+      ],
+      "correcta": 3,
+      "justificacion": "El Tratado de Lisboa (2007) eliminó los tres pilares de la UE, creando una única entidad con personalidad jurídica.",
+      "referencia": "Tratado de Lisboa"
+    },
+    {
+      "id": "0500-50",
+      "tema": "0500",
+      "nivel": "oro",
+      "enunciado": "Si el Parlamento Europeo aprueba una moción de censura contra la Comisión:",
+      "opciones": [
+        "Los miembros de la Comisión deberán dimitir colectivamente de sus cargos.",
+        "El Parlamento es automáticamente disuelto.",
+        "El Consejo Europeo debe ratificarla por unanimidad para que tenga efecto.",
+        "Sólo el Presidente de la Comisión debe dimitir."
+      ],
+      "correcta": 0,
+      "justificacion": "Si se aprueba una moción de censura, los miembros de la Comisión deberán dimitir colectivamente de sus cargos (incluido el Alto Representante en lo que respecta a sus funciones en la Comisión).",
+      "referencia": "Moción de censura"
+    }
+  ]
+}

@@ -1,0 +1,756 @@
+{
+  "tema_id": "0100",
+  "tema_nombre": "La Constitución Española de 1978",
+  "preguntas": [
+    {
+      "id": "0100-01",
+      "tema": "0100",
+      "nivel": "oro",
+      "enunciado": "¿En qué fecha fue sancionada por el Rey la Constitución Española de 1978?",
+      "opciones": [
+        "31 de octubre de 1978.",
+        "6 de diciembre de 1978.",
+        "27 de diciembre de 1978.",
+        "29 de diciembre de 1978."
+      ],
+      "correcta": 2,
+      "justificacion": "La Constitución fue aprobada por las Cortes el 31 de octubre, ratificada en referéndum el 6 de diciembre, sancionada por el Rey el 27 de diciembre y publicada en el BOE el 29 de diciembre.",
+      "referencia": "Estructura CE (Fechas)"
+    },
+    {
+      "id": "0100-02",
+      "tema": "0100",
+      "nivel": "oro",
+      "enunciado": "¿Cuántas veces ha sido reformada la Constitución Española de 1978 según el temario actualizado a junio de 2026?",
+      "opciones": [
+        "En tres ocasiones, por el procedimiento ordinario.",
+        "En dos ocasiones, por el procedimiento agravado.",
+        "En cuatro ocasiones, una de ellas por procedimiento agravado.",
+        "En cuatro ocasiones, por el procedimiento ordinario."
+      ],
+      "correcta": 3,
+      "justificacion": "Se ha modificado en 4 ocasiones por vía ordinaria (Art. 167): 1992 (Tratado de Maastricht), 2011 (Déficit Público), 2024 (Personas con discapacidad) y 2026 (Senadores por Ibiza y Formentera).",
+      "referencia": "Estructura CE (Reformas)"
+    },
+    {
+      "id": "0100-03",
+      "tema": "0100",
+      "nivel": "plata",
+      "enunciado": "Señale la afirmación correcta sobre el Preámbulo de la Constitución Española de 1978:",
+      "opciones": [
+        "Se puede reformar mediante procedimiento ordinario exclusivamente.",
+        "Fue la única parte no ratificada en referéndum.",
+        "Carece de fuerza vinculante.",
+        "Tiene la misma fuerza vinculante que el articulado."
+      ],
+      "correcta": 2,
+      "justificacion": "El Preámbulo de la Constitución carece de fuerza vinculante, a diferencia del articulado y las disposiciones, que sí la tienen.",
+      "referencia": "Preámbulo CE"
+    },
+    {
+      "id": "0100-04",
+      "tema": "0100",
+      "nivel": "oro",
+      "enunciado": "La Constitución española propugna como valores superiores de su ordenamiento jurídico:",
+      "opciones": [
+        "La igualdad, la libertad, la legalidad y la justicia.",
+        "La libertad, la justicia, la igualdad y el pluralismo político.",
+        "La legalidad, la jerarquía normativa y la seguridad jurídica.",
+        "La paz, la justicia, la libertad y la seguridad."
+      ],
+      "correcta": 1,
+      "justificacion": "Según el artículo 1.1, España se constituye en un Estado social y democrático de Derecho, que propugna como valores superiores de su ordenamiento jurídico la libertad, la justicia, la igualdad y el pluralismo político.",
+      "referencia": "Art. 1.1 CE"
+    },
+    {
+      "id": "0100-05",
+      "tema": "0100",
+      "nivel": "oro",
+      "enunciado": "Según el artículo 1 de la Constitución, la soberanía nacional reside en:",
+      "opciones": [
+        "El pueblo español, del que emanan los poderes del Estado.",
+        "La Nación española, sin que en ningún caso pueda contravenir los principios rectores del ordenamiento.",
+        "Las Cortes Generales, de las que emanan los poderes del Estado.",
+        "El Rey, como Jefe del Estado."
+      ],
+      "correcta": 0,
+      "justificacion": "El artículo 1.2 establece que la soberanía nacional reside en el pueblo español, del que emanan los poderes del Estado.",
+      "referencia": "Art. 1.2 CE"
+    },
+    {
+      "id": "0100-06",
+      "tema": "0100",
+      "nivel": "oro",
+      "enunciado": "El fundamento de la Constitución, conforme dice literalmente el artículo 2, es:",
+      "opciones": [
+        "La soberanía popular, previo acuerdo favorable del órgano general de coordinación asistencial o técnica.",
+        "La Monarquía parlamentaria, aplicándose de forma supletoria el régimen general de procedimiento administrativo.",
+        "El reconocimiento a la autonomía de las nacionalidades y regiones.",
+        "La indisoluble unidad de la Nación española, patria común e indivisible de todos los españoles."
+      ],
+      "correcta": 3,
+      "justificacion": "El artículo 2 señala literalmente que la Constitución se fundamenta en la indisoluble unidad de la Nación española, patria común e indivisible de todos los españoles.",
+      "referencia": "Art. 2 CE"
+    },
+    {
+      "id": "0100-07",
+      "tema": "0100",
+      "nivel": "oro",
+      "enunciado": "Respecto al castellano, el artículo 3 de la Constitución establece que todos los españoles tienen:",
+      "opciones": [
+        "El deber de conocerlo y el derecho a usarlo.",
+        "El derecho a conocerlo y el deber de usarlo.",
+        "El deber de conocerlo, sin perjuicio del deber de usar las lenguas cooficiales.",
+        "El deber ineludible de usarlo en sus relaciones con las Administraciones Públicas."
+      ],
+      "correcta": 0,
+      "justificacion": "El artículo 3.1 indica que el castellano es la lengua española oficial del Estado. Todos los españoles tienen el deber de conocerla y el derecho a usarla.",
+      "referencia": "Art. 3.1 CE"
+    },
+    {
+      "id": "0100-08",
+      "tema": "0100",
+      "nivel": "plata",
+      "enunciado": "Según el artículo 4, ¿cómo será la franja amarilla de la bandera de España?",
+      "opciones": [
+        "De doble anchura que cada una de las rojas.",
+        "De doble anchura que la suma de las rojas.",
+        "De igual anchura que cada una de las rojas.",
+        "De triple anchura que las rojas."
+      ],
+      "correcta": 0,
+      "justificacion": "El artículo 4.1 dispone que la bandera está formada por tres franjas horizontales, roja, amarilla y roja, siendo la amarilla de doble anchura que cada una de las rojas.",
+      "referencia": "Art. 4.1 CE"
+    },
+    {
+      "id": "0100-09",
+      "tema": "0100",
+      "nivel": "bronce",
+      "enunciado": "Según el artículo 5 de la Constitución Española de 1978, la capital del Estado es:",
+      "opciones": [
+        "La capital del Reino.",
+        "La villa de Madrid.",
+        "Madrid.",
+        "La ciudad de Madrid."
+      ],
+      "correcta": 1,
+      "justificacion": "Literalmente, el artículo 5 establece que 'La capital del Estado es la villa de Madrid'. Suele ser una pregunta trampa en los exámenes.",
+      "referencia": "Art. 5 CE"
+    },
+    {
+      "id": "0100-10",
+      "tema": "0100",
+      "nivel": "bronce",
+      "enunciado": "Según el artículo 6 de la Constitución, los partidos políticos:",
+      "opciones": [
+        "Tienen como misión garantizar la soberanía e independencia de España.",
+        "Son instrumento fundamental para la participación política.",
+        "Contribuyen a la defensa y promoción de los intereses económicos que les son propios.",
+        "Son el único instrumento para la participación política."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 6 establece que los partidos políticos expresan el pluralismo político, concurren a la formación y manifestación de la voluntad popular y son instrumento fundamental para la participación política.",
+      "referencia": "Art. 6 CE"
+    },
+    {
+      "id": "0100-11",
+      "tema": "0100",
+      "nivel": "plata",
+      "enunciado": "El artículo 8 de la CE establece que las Fuerzas Armadas tienen como misión:",
+      "opciones": [
+        "Garantizar la soberanía e independencia de España, defender su integridad territorial y el ordenamiento constitucional.",
+        "Garantizar el ordenamiento jurídico y la seguridad ciudadana, bajo la supervisión y control de la autoridad de inspección competente en la materia.",
+        "Garantizar la soberanía y estabilidad de la Nación, en las condiciones y con los requisitos fijados en las instrucciones técnicas vigentes.",
+        "Garantizar la unidad e independencia de España, en virtud de lo preceptuado para las administraciones territoriales del sector público."
+      ],
+      "correcta": 0,
+      "justificacion": "Según el artículo 8, las Fuerzas Armadas tienen como misión garantizar la soberanía e independencia de España, defender su integridad territorial y el ordenamiento constitucional.",
+      "referencia": "Art. 8 CE"
+    },
+    {
+      "id": "0100-12",
+      "tema": "0100",
+      "nivel": "oro",
+      "enunciado": "¿Cuál de los siguientes principios NO está garantizado por la Constitución en su artículo 9.3?",
+      "opciones": [
+        "La retroactividad de las disposiciones restrictivas de derechos individuales.",
+        "La publicidad de las normas.",
+        "La interdicción de la arbitrariedad de los poderes públicos.",
+        "La irretroactividad de las disposiciones sancionadoras no favorables."
+      ],
+      "correcta": 0,
+      "justificacion": "El artículo 9.3 garantiza la IRRETROACTIVIDAD de las disposiciones sancionadoras no favorables o restrictivas de derechos individuales. Por lo tanto, la opción D es falsa.",
+      "referencia": "Art. 9.3 CE"
+    },
+    {
+      "id": "0100-13",
+      "tema": "0100",
+      "nivel": "oro",
+      "enunciado": "Según el artículo 11 de la Constitución, relativo a la nacionalidad:",
+      "opciones": [
+        "Ningún español de origen podrá ser privado de su nacionalidad.",
+        "Ningún español, sea de origen o no, podrá ser privado de su nacionalidad.",
+        "La nacionalidad española se adquiere, se conserva y se pierde de acuerdo con lo establecido por Ley Orgánica.",
+        "El Estado podrá concertar tratados de doble nacionalidad con todos los países europeos."
+      ],
+      "correcta": 0,
+      "justificacion": "El artículo 11.2 indica expresamente que 'Ningún español de origen podrá ser privado de su nacionalidad'.",
+      "referencia": "Art. 11.2 CE"
+    },
+    {
+      "id": "0100-14",
+      "tema": "0100",
+      "nivel": "oro",
+      "enunciado": "Solamente los españoles serán titulares de los derechos reconocidos en el artículo 23 (participación), salvo lo que, atendiendo a criterios de reciprocidad, pueda establecerse por tratado o ley para:",
+      "opciones": [
+        "El derecho de sufragio activo y pasivo en todo tipo de elecciones.",
+        "El derecho de sufragio activo y pasivo en elecciones municipales.",
+        "El derecho de sufragio activo en elecciones municipales, pero nunca el pasivo.",
+        "El derecho de sufragio activo en elecciones generales."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 13.2 establece esta excepción para el derecho de sufragio activo y pasivo en las elecciones municipales (modificado tras el Tratado de Maastricht en 1992).",
+      "referencia": "Art. 13.2 CE"
+    },
+    {
+      "id": "0100-15",
+      "tema": "0100",
+      "nivel": "oro",
+      "enunciado": "Los españoles son iguales ante la ley, sin que pueda prevalecer discriminación alguna por razón de:",
+      "opciones": [
+        "Nacimiento, edad, raza, sexo, religión u opinión, conforme a lo previsto en las directrices de ejecución e inspección aplicables.",
+        "Nacimiento, raza, sexo, religión, opinión o cualquier otra condición o circunstancia personal o social.",
+        "Nacionalidad, raza, sexo, religión, opinión o clase social.",
+        "Nacimiento, raza, sexo, religión, estado civil o cualquier otra condición personal."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 14 de la CE cita expresamente: nacimiento, raza, sexo, religión, opinión o cualquier otra condición o circunstancia personal o social (no se incluye expresamente la edad ni la nacionalidad).",
+      "referencia": "Art. 14 CE"
+    },
+    {
+      "id": "0100-16",
+      "tema": "0100",
+      "nivel": "oro",
+      "enunciado": "El derecho a la vida y a la integridad física y moral, recogido en el artículo 15, conlleva que queda abolida la pena de muerte:",
+      "opciones": [
+        "Salvo en estado de sitio, atendiendo a los principios de proporcionalidad, eficiencia y jerarquía normativa.",
+        "Salvo lo que pueda disponer el Código Penal para delitos de terrorismo.",
+        "Salvo lo que puedan disponer las leyes penales militares para tiempos de guerra.",
+        "En todos los casos sin excepción, según lo acordado en los planes estratégicos y operativos de gestión pública."
+      ],
+      "correcta": 2,
+      "justificacion": "El artículo 15 establece: 'Queda abolida la pena de muerte, salvo lo que puedan disponer las leyes penales militares para tiempos de guerra'.",
+      "referencia": "Art. 15 CE"
+    },
+    {
+      "id": "0100-17",
+      "tema": "0100",
+      "nivel": "oro",
+      "enunciado": "De acuerdo con lo previsto en el artículo 16 de la Constitución Española, los poderes públicos mantendrán relaciones de cooperación:",
+      "opciones": [
+        "Sólo con la Iglesia Católica.",
+        "Con todas las confesiones, sin especificar ninguna expresamente en la Constitución.",
+        "Con la Iglesia Católica y las demás confesiones.",
+        "Sólo con las confesiones cristianas."
+      ],
+      "correcta": 2,
+      "justificacion": "El artículo 16.3 establece que ninguna confesión tendrá carácter estatal, pero los poderes públicos tendrán en cuenta las creencias religiosas de la sociedad española y mantendrán las consiguientes relaciones de cooperación con la Iglesia Católica y las demás confesiones.",
+      "referencia": "Art. 16.3 CE"
+    },
+    {
+      "id": "0100-18",
+      "tema": "0100",
+      "nivel": "oro",
+      "enunciado": "¿Cuál es el plazo máximo general de la detención preventiva establecido en el artículo 17 de la Constitución?",
+      "opciones": [
+        "El tiempo estrictamente necesario para las averiguaciones, que en ningún caso superará las 72 horas.",
+        "72 horas, con el visto bueno y la fiscalización previa de los órganos de control económico.",
+        "48 horas, sin que en ningún caso pueda contravenir los principios rectores del ordenamiento.",
+        "24 horas, en virtud de lo preceptuado para las administraciones territoriales del sector público."
+      ],
+      "correcta": 0,
+      "justificacion": "El artículo 17.2 establece que la detención preventiva no podrá durar más del tiempo estrictamente necesario, y en todo caso, en el plazo máximo de 72 horas el detenido será puesto en libertad o a disposición judicial.",
+      "referencia": "Art. 17.2 CE"
+    },
+    {
+      "id": "0100-19",
+      "tema": "0100",
+      "nivel": "oro",
+      "enunciado": "El procedimiento regulado por ley para producir la inmediata puesta a disposición judicial de toda persona detenida ilegalmente se denomina:",
+      "opciones": [
+        "Exención de prisión provisional.",
+        "Suspensión de detención.",
+        "Recurso de amparo.",
+        "Habeas corpus."
+      ],
+      "correcta": 3,
+      "justificacion": "El artículo 17.4 establece que la ley regulará un procedimiento de 'habeas corpus' para la inmediata puesta a disposición judicial de toda persona detenida ilegalmente.",
+      "referencia": "Art. 17.4 CE"
+    },
+    {
+      "id": "0100-20",
+      "tema": "0100",
+      "nivel": "plata",
+      "enunciado": "¿En qué casos permite la Constitución la entrada y registro en un domicilio sin el consentimiento del titular ni resolución judicial?",
+      "opciones": [
+        "En ningún caso.",
+        "En caso de delito flagrante.",
+        "Para la detención de miembros de bandas armadas.",
+        "Por razones de grave riesgo o catástrofe pública."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 18.2 establece que el domicilio es inviolable. Ninguna entrada o registro podrá hacerse en él sin consentimiento del titular o resolución judicial, salvo en caso de flagrante delito.",
+      "referencia": "Art. 18.2 CE"
+    },
+    {
+      "id": "0100-21",
+      "tema": "0100",
+      "nivel": "bronce",
+      "enunciado": "Según el artículo 21 de la Constitución, respecto al derecho de reunión pacífica y sin armas en lugares de tránsito público y manifestaciones:",
+      "opciones": [
+        "Deberá autorizarse por mayoría absoluta del Ayuntamiento correspondiente, salvo que una norma con rango constitucional o legal disponga expresamente lo contrario.",
+        "Se dará comunicación previa a la autoridad, que sólo podrá prohibirlas cuando existan razones fundadas de alteración del orden público, con peligro para personas y bienes.",
+        "Requerirá autorización previa de la autoridad competente, de acuerdo con la resolución motivada que se dicte al efecto en cada ejercicio.",
+        "No precisará de ningún trámite previo, dado que es un derecho fundamental, salvo en los supuestos excepcionales debidamente autorizados por el órgano competente."
+      ],
+      "correcta": 1,
+      "justificacion": "El art. 21.2 indica que en reuniones en tránsito público y manifestaciones se dará comunicación previa a la autoridad, que sólo podrá prohibirlas cuando existan razones fundadas de alteración del orden público, con peligro para personas o bienes.",
+      "referencia": "Art. 21.2 CE"
+    },
+    {
+      "id": "0100-22",
+      "tema": "0100",
+      "nivel": "oro",
+      "enunciado": "En relación con el derecho de asociación (Art. 22 de la CE), ¿cuáles de las siguientes asociaciones están expresamente prohibidas?",
+      "opciones": [
+        "Las asociaciones que no cuenten con autorización judicial previa para su formación.",
+        "Las asociaciones secretas y las de carácter paramilitar.",
+        "Las asociaciones con fines políticos o sindicales.",
+        "Las asociaciones sin fines de lucro."
+      ],
+      "correcta": 1,
+      "justificacion": "El art. 22.5 de la Constitución prohíbe explícitamente las asociaciones secretas y las de carácter paramilitar.",
+      "referencia": "Art. 22.5 CE"
+    },
+    {
+      "id": "0100-23",
+      "tema": "0100",
+      "nivel": "oro",
+      "enunciado": "El artículo 23 de la Constitución reconoce a los ciudadanos el derecho a acceder en condiciones de igualdad a las funciones y cargos públicos:",
+      "opciones": [
+        "Con los requisitos que señalen las leyes.",
+        "Aprobando previamente una oposición libre y pública.",
+        "Únicamente si son mayores de 21 años.",
+        "Siempre que acrediten arraigo en el territorio."
+      ],
+      "correcta": 0,
+      "justificacion": "El art. 23.2 señala que los ciudadanos tienen derecho a acceder en condiciones de igualdad a las funciones y cargos públicos, con los requisitos que señalen las leyes.",
+      "referencia": "Art. 23.2 CE"
+    },
+    {
+      "id": "0100-24",
+      "tema": "0100",
+      "nivel": "oro",
+      "enunciado": "Según el artículo 24 de la Constitución, todas las personas tienen derecho a obtener la tutela efectiva de los jueces y tribunales en el ejercicio de sus derechos e intereses legítimos, sin que, en ningún caso, pueda producirse:",
+      "opciones": [
+        "Detención.",
+        "Condena previa.",
+        "Indefensión.",
+        "Retraso indebido."
+      ],
+      "correcta": 2,
+      "justificacion": "El art. 24.1 afirma que en ningún caso podrá producirse indefensión en la obtención de la tutela efectiva de los jueces y tribunales.",
+      "referencia": "Art. 24.1 CE"
+    },
+    {
+      "id": "0100-25",
+      "tema": "0100",
+      "nivel": "plata",
+      "enunciado": "Conforme al artículo 25 de la CE, las penas privativas de libertad y las medidas de seguridad estarán orientadas hacia:",
+      "opciones": [
+        "La prevención general y especial de delitos.",
+        "La retribución del daño causado a las víctimas.",
+        "El castigo ejemplarizante del infractor.",
+        "La reeducación y reinserción social."
+      ],
+      "correcta": 3,
+      "justificacion": "El art. 25.2 establece que las penas privativas de libertad y las medidas de seguridad estarán orientadas hacia la reeducación y reinserción social y no podrán consistir en trabajos forzados.",
+      "referencia": "Art. 25.2 CE"
+    },
+    {
+      "id": "0100-26",
+      "tema": "0100",
+      "nivel": "plata",
+      "enunciado": "¿En qué ámbito prohíbe la Constitución Española los Tribunales de Honor?",
+      "opciones": [
+        "En ningún ámbito, puesto que están permitidos si la ley los regula.",
+        "En el ámbito de las relaciones laborales y sindicales.",
+        "En el ámbito de la Administración Civil y de las organizaciones profesionales.",
+        "Exclusivamente en el ámbito de la Administración Militar."
+      ],
+      "correcta": 2,
+      "justificacion": "El artículo 26 prohíbe los Tribunales de Honor en el ámbito de la Administración civil y de las organizaciones profesionales.",
+      "referencia": "Art. 26 CE"
+    },
+    {
+      "id": "0100-27",
+      "tema": "0100",
+      "nivel": "oro",
+      "enunciado": "Respecto al derecho a la educación (art. 27), la Constitución dispone expresamente que la enseñanza básica es:",
+      "opciones": [
+        "Obligatoria y gratuita sólo en centros públicos.",
+        "Optativa y gratuita.",
+        "Obligatoria, pero podrá establecerse un copago.",
+        "Obligatoria y gratuita."
+      ],
+      "correcta": 3,
+      "justificacion": "El art. 27.4 de la Constitución establece de forma taxativa: 'La enseñanza básica es obligatoria y gratuita'.",
+      "referencia": "Art. 27.4 CE"
+    },
+    {
+      "id": "0100-28",
+      "tema": "0100",
+      "nivel": "oro",
+      "enunciado": "Según el artículo 28, la ley que regule el ejercicio del derecho a la huelga establecerá las garantías precisas para asegurar:",
+      "opciones": [
+        "El acuerdo rápido entre patronal y sindicatos.",
+        "El mantenimiento de los servicios esenciales de la comunidad.",
+        "El mantenimiento de la rentabilidad de las empresas afectadas.",
+        "La mediación obligatoria del Estado."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 28.2 reconoce el derecho a la huelga y especifica que la ley que lo regule establecerá garantías para asegurar el mantenimiento de los servicios esenciales de la comunidad.",
+      "referencia": "Art. 28.2 CE"
+    },
+    {
+      "id": "0100-29",
+      "tema": "0100",
+      "nivel": "plata",
+      "enunciado": "El derecho de petición individual y colectiva reconocido en el artículo 29 de la Constitución, deberá ejercerse:",
+      "opciones": [
+        "De forma verbal o escrita, indistintamente.",
+        "Exclusivamente por escrito.",
+        "De forma presencial ante la autoridad competente.",
+        "Mediante comparecencia pública."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 29.1 señala que los españoles tendrán el derecho de petición individual y colectiva, por escrito, en la forma y con los efectos que determine la ley.",
+      "referencia": "Art. 29.1 CE"
+    },
+    {
+      "id": "0100-30",
+      "tema": "0100",
+      "nivel": "oro",
+      "enunciado": "Conforme al artículo 30, la ley fijará las obligaciones militares de los españoles y regulará, con las debidas garantías:",
+      "opciones": [
+        "El servicio militar profesional obligatorio.",
+        "El derecho a portar armas.",
+        "La movilización general de los ciudadanos.",
+        "La objeción de conciencia."
+      ],
+      "correcta": 3,
+      "justificacion": "El artículo 30.2 indica que la ley regulará la objeción de conciencia, así como las demás causas de exención del servicio militar obligatorio.",
+      "referencia": "Art. 30.2 CE"
+    },
+    {
+      "id": "0100-31",
+      "tema": "0100",
+      "nivel": "bronce",
+      "enunciado": "El sistema tributario español, según el artículo 31, deberá inspirarse en los principios de igualdad y progresividad, y en ningún caso tendrá alcance:",
+      "opciones": [
+        "Discriminatorio.",
+        "Confiscatorio.",
+        "Recaudatorio.",
+        "Desproporcionado."
+      ],
+      "correcta": 1,
+      "justificacion": "El art. 31.1 declara que el sistema tributario justo inspirado en igualdad y progresividad no tendrá, en ningún caso, alcance confiscatorio.",
+      "referencia": "Art. 31.1 CE"
+    },
+    {
+      "id": "0100-32",
+      "tema": "0100",
+      "nivel": "bronce",
+      "enunciado": "Respecto al matrimonio, el artículo 32 de la Constitución reconoce el derecho a contraerlo a:",
+      "opciones": [
+        "El hombre y la mujer, con plena igualdad jurídica.",
+        "Los españoles, conforme al Derecho Canónico.",
+        "Las familias, para garantizar la protección de la infancia.",
+        "Todos los ciudadanos, siempre que sean mayores de edad."
+      ],
+      "correcta": 0,
+      "justificacion": "El art. 32.1 dispone que el hombre y la mujer tienen derecho a contraer matrimonio con plena igualdad jurídica.",
+      "referencia": "Art. 32.1 CE"
+    },
+    {
+      "id": "0100-33",
+      "tema": "0100",
+      "nivel": "plata",
+      "enunciado": "¿Qué delimitará el contenido del derecho a la propiedad privada y a la herencia según la Constitución?",
+      "opciones": [
+        "Los Presupuestos Generales del Estado.",
+        "Su función social, de acuerdo con las leyes.",
+        "La potestad tributaria.",
+        "El interés general del Estado."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 33.2 señala que la función social de estos derechos delimitará su contenido, de acuerdo con las leyes.",
+      "referencia": "Art. 33.2 CE"
+    },
+    {
+      "id": "0100-34",
+      "tema": "0100",
+      "nivel": "bronce",
+      "enunciado": "Según el artículo 36, la estructura interna y el funcionamiento de los Colegios Profesionales deberán ser:",
+      "opciones": [
+        "Aprobados por Ley Orgánica.",
+        "Independientes de las Administraciones Públicas.",
+        "Democráticos.",
+        "Plurales y descentralizados."
+      ],
+      "correcta": 2,
+      "justificacion": "El artículo 36 establece que la ley regulará las peculiaridades propias del régimen jurídico de los Colegios Profesionales y que su estructura interna y funcionamiento deberán ser democráticos.",
+      "referencia": "Art. 36 CE"
+    },
+    {
+      "id": "0100-35",
+      "tema": "0100",
+      "nivel": "plata",
+      "enunciado": "La ley garantizará el derecho a la negociación colectiva laboral y la fuerza vinculante de:",
+      "opciones": [
+        "Las sentencias laborales.",
+        "Los estatutos sindicales.",
+        "Los contratos de trabajo.",
+        "Los convenios colectivos."
+      ],
+      "correcta": 3,
+      "justificacion": "El art. 37.1 establece que la ley garantizará el derecho a la negociación colectiva laboral entre los representantes de los trabajadores y empresarios, así como la fuerza vinculante de los convenios.",
+      "referencia": "Art. 37.1 CE"
+    },
+    {
+      "id": "0100-36",
+      "tema": "0100",
+      "nivel": "plata",
+      "enunciado": "El artículo 38 de la Constitución reconoce la libertad de empresa en el marco de:",
+      "opciones": [
+        "La Unión Europea.",
+        "Un Estado centralizado.",
+        "La economía de mercado.",
+        "La solidaridad interterritorial."
+      ],
+      "correcta": 2,
+      "justificacion": "El art. 38 reconoce la libertad de empresa en el marco de la economía de mercado.",
+      "referencia": "Art. 38 CE"
+    },
+    {
+      "id": "0100-37",
+      "tema": "0100",
+      "nivel": "plata",
+      "enunciado": "¿A qué Capítulo del Título I pertenecen derechos como la protección de la salud o el acceso a una vivienda digna?",
+      "opciones": [
+        "De los derechos fundamentales y de las libertades públicas.",
+        "De los derechos y deberes de los ciudadanos.",
+        "De las garantías de las libertades y derechos fundamentales.",
+        "De los principios rectores de la política social y económica."
+      ],
+      "correcta": 3,
+      "justificacion": "La salud (art. 43) y la vivienda digna (art. 47) están ubicados en el Capítulo III del Título I, referidos a los principios rectores de la política social y económica (art. 39 a 52).",
+      "referencia": "Cap. III Título I CE"
+    },
+    {
+      "id": "0100-38",
+      "tema": "0100",
+      "nivel": "oro",
+      "enunciado": "Los derechos y libertades reconocidos en el Capítulo II del Título I (arts. 14 a 38) vinculan a:",
+      "opciones": [
+        "Al poder ejecutivo exclusivamente.",
+        "Todos los poderes públicos.",
+        "Únicamente a los jueces y tribunales.",
+        "Solamente a la Administración del Estado."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 53.1 indica de forma clara que los derechos y libertades reconocidos en el Capítulo II vinculan a todos los poderes públicos.",
+      "referencia": "Art. 53.1 CE"
+    },
+    {
+      "id": "0100-39",
+      "tema": "0100",
+      "nivel": "oro",
+      "enunciado": "El Defensor del Pueblo será elegido por las Cortes Generales para un periodo de:",
+      "opciones": [
+        "De forma vitalicia.",
+        "5 años.",
+        "4 años.",
+        "6 años."
+      ],
+      "correcta": 1,
+      "justificacion": "Según la Ley Orgánica 3/1981, el Defensor del Pueblo será elegido por las Cortes Generales para un periodo de 5 años.",
+      "referencia": "LO 3/1981 (Art. 54 CE)"
+    },
+    {
+      "id": "0100-40",
+      "tema": "0100",
+      "nivel": "oro",
+      "enunciado": "El artículo 55 de la CE permite la suspensión de ciertos derechos cuando se acuerde la declaración del estado de:",
+      "opciones": [
+        "Alarma o sitio.",
+        "Alarma o excepción.",
+        "Excepción o de sitio.",
+        "Sólo en el estado de sitio."
+      ],
+      "correcta": 2,
+      "justificacion": "El art. 55.1 permite la suspensión de los derechos que relaciona cuando se acuerde la declaración del estado de excepción o de sitio (no permite suspender derechos en el estado de alarma).",
+      "referencia": "Art. 55.1 CE"
+    },
+    {
+      "id": "0100-41",
+      "tema": "0100",
+      "nivel": "bronce",
+      "enunciado": "Según el artículo 56, el Rey asume la más alta representación del Estado español en las relaciones internacionales, especialmente con:",
+      "opciones": [
+        "Las organizaciones intergubernamentales.",
+        "Los países vecinos y limítrofes.",
+        "Las naciones de su comunidad histórica.",
+        "Las naciones de la Unión Europea."
+      ],
+      "correcta": 2,
+      "justificacion": "El art. 56.1 establece que el Rey asume la más alta representación en las relaciones internacionales, especialmente con las naciones de su comunidad histórica.",
+      "referencia": "Art. 56.1 CE"
+    },
+    {
+      "id": "0100-42",
+      "tema": "0100",
+      "nivel": "oro",
+      "enunciado": "La sucesión en el trono seguirá el orden regular de primogenitura y representación. Según el artículo 57, en el mismo grado será preferido:",
+      "opciones": [
+        "El de más edad, sin importar el sexo.",
+        "El varón a la mujer.",
+        "El elegido por las Cortes Generales.",
+        "La mujer al varón."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 57.1 indica que en el mismo grado se prefiere el varón a la mujer, y en el mismo sexo, la persona de más edad a la de menos.",
+      "referencia": "Art. 57.1 CE"
+    },
+    {
+      "id": "0100-43",
+      "tema": "0100",
+      "nivel": "plata",
+      "enunciado": "La Reina consorte o el consorte de la Reina no podrán asumir funciones constitucionales, salvo lo dispuesto para:",
+      "opciones": [
+        "La presidencia del Consejo de Ministros.",
+        "El mando de las Fuerzas Armadas.",
+        "La Regencia.",
+        "La disolución de las Cámaras."
+      ],
+      "correcta": 2,
+      "justificacion": "El artículo 58 dispone que no podrán asumir funciones constitucionales salvo lo dispuesto para la Regencia.",
+      "referencia": "Art. 58 CE"
+    },
+    {
+      "id": "0100-44",
+      "tema": "0100",
+      "nivel": "plata",
+      "enunciado": "Para ejercer la Regencia del Rey (art. 59) es requisito indispensable:",
+      "opciones": [
+        "Ser ascendiente directo del Rey.",
+        "Ser aprobado por el Gobierno de la Nación.",
+        "Ser nombrado en el testamento del Rey difunto.",
+        "Ser español y mayor de edad."
+      ],
+      "correcta": 3,
+      "justificacion": "El artículo 59.4 establece que para ejercer la Regencia es preciso ser español y mayor de edad (¡Ojo! español, no exige ser español de origen).",
+      "referencia": "Art. 59.4 CE"
+    },
+    {
+      "id": "0100-45",
+      "tema": "0100",
+      "nivel": "plata",
+      "enunciado": "En relación a la tutela del Rey menor (art. 60), el cargo de tutor:",
+      "opciones": [
+        "Podrá ser ejercido por las Cortes en pleno.",
+        "Es compatible con cualquier representación política.",
+        "Puede acumularse con el cargo de Regente en cualquier caso.",
+        "Es incompatible con el de todo cargo o representación política."
+      ],
+      "correcta": 3,
+      "justificacion": "El artículo 60.2 indica explícitamente que el ejercicio de la tutela es incompatible con el de todo cargo o representación política.",
+      "referencia": "Art. 60.2 CE"
+    },
+    {
+      "id": "0100-46",
+      "tema": "0100",
+      "nivel": "oro",
+      "enunciado": "¿A quién corresponde expedir los decretos acordados en el Consejo de Ministros, conforme al art. 62 de la CE?",
+      "opciones": [
+        "A las Cortes Generales.",
+        "Al Ministro de la Presidencia.",
+        "Al Presidente del Gobierno.",
+        "Al Rey."
+      ],
+      "correcta": 3,
+      "justificacion": "El artículo 62 f) de la Constitución atribuye al Rey la función de expedir los decretos acordados en el Consejo de Ministros (los Reales Decretos).",
+      "referencia": "Art. 62.f CE"
+    },
+    {
+      "id": "0100-47",
+      "tema": "0100",
+      "nivel": "oro",
+      "enunciado": "Los actos del Rey serán refrendados por el Presidente del Gobierno y, en su caso, por los Ministros competentes. De los actos del Rey serán responsables:",
+      "opciones": [
+        "Las personas que los refrenden.",
+        "El propio Rey.",
+        "El Tribunal Constitucional.",
+        "Las Cortes Generales."
+      ],
+      "correcta": 0,
+      "justificacion": "El artículo 64.2 indica que de los actos del Rey serán responsables las personas que los refrenden (quedando el Rey exento de responsabilidad según el art. 56).",
+      "referencia": "Art. 64.2 CE"
+    },
+    {
+      "id": "0100-48",
+      "tema": "0100",
+      "nivel": "bronce",
+      "enunciado": "Según el artículo 66 de la CE, las Cortes Generales ejercen la potestad legislativa del Estado, aprueban sus Presupuestos y:",
+      "opciones": [
+        "Ejercen el mando de las Fuerzas Armadas.",
+        "Declaran los estados de alarma y excepción.",
+        "Controlan la acción del Gobierno.",
+        "Nombran al Presidente del Gobierno directamente."
+      ],
+      "correcta": 2,
+      "justificacion": "El art. 66.2 establece que las Cortes Generales ejercen la potestad legislativa del Estado, aprueban sus Presupuestos, controlan la acción del Gobierno y tienen las demás competencias que les atribuya la CE.",
+      "referencia": "Art. 66.2 CE"
+    },
+    {
+      "id": "0100-49",
+      "tema": "0100",
+      "nivel": "plata",
+      "enunciado": "¿Cuál es el mandato de los Diputados del Congreso según la Constitución Española (Art. 68)?",
+      "opciones": [
+        "Permanente hasta la convocatoria de referéndum.",
+        "3 años prorrogables a 5.",
+        "5 años.",
+        "4 años."
+      ],
+      "correcta": 3,
+      "justificacion": "El artículo 68.4 dispone que el Congreso es elegido por cuatro años. El mandato de los Diputados termina cuatro años después de su elección o el día de la disolución de la Cámara.",
+      "referencia": "Art. 68.4 CE"
+    },
+    {
+      "id": "0100-50",
+      "tema": "0100",
+      "nivel": "oro",
+      "enunciado": "El Senado es la Cámara de representación territorial. En cada provincia peninsular se elegirán, por regla general:",
+      "opciones": [
+        "2 Senadores.",
+        "Un número proporcional a su población.",
+        "4 Senadores.",
+        "3 Senadores."
+      ],
+      "correcta": 2,
+      "justificacion": "El artículo 69.2 determina que en cada provincia se elegirán 4 Senadores por sufragio universal, libre, igual, directo y secreto por los votantes de cada una de ellas.",
+      "referencia": "Art. 69.2 CE"
+    }
+  ]
+}

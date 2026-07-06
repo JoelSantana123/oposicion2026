@@ -1,0 +1,762 @@
+const fs = require('fs');
+const path = require('path');
+
+const tema2900 = {
+  "tema_id": "2900",
+  "tema_nombre": "Subvenciones (Ley 38/2003 y Decreto 36/2009 Canarias)",
+  "preguntas": [
+    {
+      "id": "2900-01",
+      "tema": "2900",
+      "nivel": "oro",
+      "enunciado": "La Ley que regula con carácter básico las subvenciones otorgadas por las Administraciones Públicas en España es:",
+      "opciones": [
+        "La Ley 40/2015, de 1 de octubre.",
+        "La Ley 38/2003, de 17 de noviembre, General de Subvenciones.",
+        "El Real Decreto Legislativo 3/2011.",
+        "La Ley 39/2015, de 1 de octubre."
+      ],
+      "correcta": 1,
+      "justificacion": "La Ley 38/2003, de 17 de noviembre, General de Subvenciones (LGS), es la norma estatal básica en la materia.",
+      "referencia": "Ley 38/2003 (LGS)"
+    },
+    {
+      "id": "2900-02",
+      "tema": "2900",
+      "nivel": "plata",
+      "enunciado": "Según el artículo 2 de la LGS, se entiende por subvención toda disposición dineraria realizada por cualesquiera de los sujetos contemplados en la Ley, a favor de personas públicas o privadas, y que cumpla los siguientes requisitos:",
+      "opciones": [
+        "Que la entrega se realice sin contraprestación directa de los beneficiarios, sujeta al cumplimiento de un determinado objetivo o proyecto, y el proyecto tenga por objeto el fomento de una actividad de utilidad pública o interés social o de promoción de una finalidad pública.",
+        "Que haya contraprestación económica directa por parte del beneficiario.",
+        "Que su otorgamiento sea siempre directo y sin concurrencia competitiva.",
+        "Que se destine exclusivamente a financiar el déficit de explotación de empresas públicas."
+      ],
+      "correcta": 0,
+      "justificacion": "El artículo 2.1 de la LGS define la subvención estableciendo tres requisitos: ausencia de contraprestación directa, afectación a un fin (cumplimiento de un objetivo/proyecto) y utilidad pública o interés social.",
+      "referencia": "Art. 2.1 LGS"
+    },
+    {
+      "id": "2900-03",
+      "tema": "2900",
+      "nivel": "oro",
+      "enunciado": "¿Qué prestaciones NO están comprendidas en el ámbito de aplicación de la Ley General de Subvenciones?",
+      "opciones": [
+        "Las ayudas para el fomento del empleo.",
+        "Las prestaciones contributivas y no contributivas de la Seguridad Social, las pensiones asistenciales y las prestaciones a favor de los afectados por síndrome tóxico.",
+        "Las subvenciones de la Política Agrícola Común (PAC).",
+        "Las ayudas a organizaciones no gubernamentales."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 2.4 de la LGS excluye expresamente de su ámbito, entre otras, a las prestaciones de la Seguridad Social, las pensiones asistenciales y las ayudas a afectados por el VIH o síndrome tóxico.",
+      "referencia": "Art. 2.4 LGS"
+    },
+    {
+      "id": "2900-04",
+      "tema": "2900",
+      "nivel": "plata",
+      "enunciado": "El procedimiento ordinario de concesión de subvenciones se tramitará en régimen de:",
+      "opciones": [
+        "Concesión directa.",
+        "Sorteo público.",
+        "Concurrencia competitiva.",
+        "Subasta a la baja."
+      ],
+      "correcta": 2,
+      "justificacion": "El artículo 22.1 de la LGS establece que el procedimiento ordinario de concesión de subvenciones se tramitará en régimen de concurrencia competitiva.",
+      "referencia": "Art. 22.1 LGS"
+    },
+    {
+      "id": "2900-05",
+      "tema": "2900",
+      "nivel": "oro",
+      "enunciado": "La 'concurrencia competitiva' en materia de subvenciones implica:",
+      "opciones": [
+        "El otorgamiento por orden de presentación de solicitudes hasta el agotamiento del crédito.",
+        "La prelación (ordenación) de las solicitudes presentadas según criterios de valoración fijados en las bases, adjudicando a las que obtengan mayor valoración dentro del crédito disponible.",
+        "El prorrateo automático del crédito entre todos los solicitantes que cumplan los requisitos.",
+        "La adjudicación mediante concurso público de precios."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 22.1 de la LGS define la concurrencia competitiva como el procedimiento mediante el cual la concesión se realiza mediante la comparación de las solicitudes presentadas, a fin de establecer una prelación entre ellas de acuerdo con los criterios de valoración fijados en las bases reguladoras.",
+      "referencia": "Art. 22.1 LGS"
+    },
+    {
+      "id": "2900-06",
+      "tema": "2900",
+      "nivel": "plata",
+      "enunciado": "¿Cuándo pueden concederse subvenciones de forma directa (sin concurrencia competitiva)?",
+      "opciones": [
+        "Siempre que el importe sea inferior a 15.000 euros.",
+        "Cuando estén previstas nominativamente en los Presupuestos, cuando su otorgamiento y cuantía vengan impuestos por una norma de rango legal, y cuando se acrediten razones de interés público, social, económico o humanitario que dificulten la concurrencia pública.",
+        "Cuando el órgano concedente así lo decida discrecionalmente.",
+        "Solo en el caso de subvenciones a partidos políticos."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 22.2 de la LGS establece los tres supuestos de concesión directa: previstas nominativamente en presupuestos, exigidas por ley, o con carácter excepcional cuando se acrediten razones de interés público/social y no quepa concurrencia.",
+      "referencia": "Art. 22.2 LGS"
+    },
+    {
+      "id": "2900-07",
+      "tema": "2900",
+      "nivel": "bronce",
+      "enunciado": "¿Qué es la 'Base de Datos Nacional de Subvenciones' (BDNS)?",
+      "opciones": [
+        "Un registro exclusivo para beneficiarios sancionados.",
+        "El sistema nacional de publicidad de subvenciones públicas, operando como base de datos que garantiza la transparencia.",
+        "Un portal para solicitar ayudas europeas.",
+        "Una herramienta exclusiva de la Agencia Tributaria."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 20 de la LGS (modificado en 2014) configura la BDNS como el sistema nacional de publicidad de subvenciones, donde las Administraciones deben registrar las bases reguladoras, convocatorias, concesiones y resoluciones de reintegro.",
+      "referencia": "Art. 20 LGS"
+    },
+    {
+      "id": "2900-08",
+      "tema": "2900",
+      "nivel": "oro",
+      "enunciado": "Para que una Administración pueda conceder subvenciones, es requisito previo la aprobación de:",
+      "opciones": [
+        "Un Plan Estratégico de Subvenciones, que concrete los objetivos, efectos que se pretenden, costes de previsión y fuentes de financiación.",
+        "Una Ley Orgánica que autorice la convocatoria.",
+        "Un reglamento estatal específico para cada subvención.",
+        "La autorización del Consejo de Ministros."
+      ],
+      "correcta": 0,
+      "justificacion": "El artículo 8.1 de la LGS exige como requisito previo al establecimiento de subvenciones que los órganos competentes aprueben un plan estratégico de subvenciones.",
+      "referencia": "Art. 8.1 LGS"
+    },
+    {
+      "id": "2900-09",
+      "tema": "2900",
+      "nivel": "plata",
+      "enunciado": "Las 'bases reguladoras' de la concesión de subvenciones de la Administración General del Estado se aprueban, como regla general, mediante:",
+      "opciones": [
+        "Acuerdo de Consejo de Ministros.",
+        "Orden de la persona titular del Ministerio correspondiente.",
+        "Resolución del Director General.",
+        "Ley del Parlamento."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 17 de la LGS establece que, en el ámbito de la AGE, las bases reguladoras de las subvenciones se aprueban por Orden Ministerial.",
+      "referencia": "Art. 17.1 LGS"
+    },
+    {
+      "id": "2900-10",
+      "tema": "2900",
+      "nivel": "oro",
+      "enunciado": "No podrán obtener la condición de beneficiario de subvenciones las personas en las que concurra alguna de las prohibiciones del art. 13 LGS. ¿Cuál de las siguientes es una de ellas?",
+      "opciones": [
+        "Tener el domicilio social en otro país de la Unión Europea.",
+        "No hallarse al corriente en el cumplimiento de las obligaciones tributarias o frente a la Seguridad Social.",
+        "Ser una entidad sin ánimo de lucro.",
+        "Haber sido beneficiario de una subvención en el ejercicio anterior."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 13.2 de la LGS enumera las prohibiciones para ser beneficiario, entre las que destaca no hallarse al corriente en el cumplimiento de las obligaciones tributarias o frente a la Seguridad Social.",
+      "referencia": "Art. 13.2.e) LGS"
+    },
+    {
+      "id": "2900-11",
+      "tema": "2900",
+      "nivel": "plata",
+      "enunciado": "¿Qué es la 'entidad colaboradora' en materia de subvenciones?",
+      "opciones": [
+        "El destinatario final de los fondos subvencionados.",
+        "Aquélla que, actuando en nombre y por cuenta del órgano concedente, entrega y distribuye los fondos públicos a los beneficiarios, o colabora en la gestión sin que se produzca la previa entrega de los fondos.",
+        "El banco donde el beneficiario ingresa la ayuda.",
+        "La empresa que realiza la auditoría de las cuentas."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 12 de la LGS define a la entidad colaboradora como aquella que entrega y distribuye los fondos públicos a los beneficiarios actuando en nombre y por cuenta del concedente.",
+      "referencia": "Art. 12.1 LGS"
+    },
+    {
+      "id": "2900-12",
+      "tema": "2900",
+      "nivel": "bronce",
+      "enunciado": "El beneficiario de la subvención tiene la obligación de 'justificar' ante el órgano concedente o la entidad colaboradora:",
+      "opciones": [
+        "Que ha gastado el dinero, pero no en qué.",
+        "El cumplimiento de los requisitos y condiciones, así como la realización de la actividad y el cumplimiento de la finalidad que determinen la concesión o disfrute de la subvención.",
+        "Solo el pago de los impuestos correspondientes.",
+        "Únicamente la procedencia de los fondos propios."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 14.1.b) de la LGS establece la obligación del beneficiario de justificar el cumplimiento de los requisitos, la realización de la actividad y el cumplimiento de la finalidad que motivó la concesión.",
+      "referencia": "Art. 14.1.b) LGS"
+    },
+    {
+      "id": "2900-13",
+      "tema": "2900",
+      "nivel": "oro",
+      "enunciado": "La justificación por el beneficiario del cumplimiento de las condiciones y de la consecución de los objetivos de la subvención revestirá, con carácter general, la forma de:",
+      "opciones": [
+        "Declaración responsable.",
+        "Cuenta justificativa del gasto realizado.",
+        "Certificado notarial.",
+        "Informe favorable de una consultora."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 30.1 de la LGS establece que, con carácter general, la justificación de la subvención revestirá la forma de cuenta justificativa del gasto realizado, aportando los justificantes de los gastos y pagos.",
+      "referencia": "Art. 30.1 LGS"
+    },
+    {
+      "id": "2900-14",
+      "tema": "2900",
+      "nivel": "plata",
+      "enunciado": "Cuando el importe del gasto subvencionable en un contrato de suministro supera el umbral previsto en la Ley de Contratos del Sector Público para el contrato menor (15.000€), el beneficiario de la subvención (siendo sujeto privado) debe:",
+      "opciones": [
+        "Convocar un concurso público en la Plataforma de Contratación del Estado.",
+        "Solicitar como mínimo tres ofertas de diferentes proveedores, con carácter previo a la contracción del compromiso para la obra, la prestación del servicio o la entrega del bien.",
+        "Contratar siempre con la empresa de menor coste.",
+        "Pedir autorización al Ministerio de Hacienda."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 31.3 de la LGS exige solicitar como mínimo 3 ofertas cuando el importe del gasto subvencionable supera los umbrales del contrato menor (40.000€ obras, 15.000€ suministros/servicios), salvo excepciones.",
+      "referencia": "Art. 31.3 LGS"
+    },
+    {
+      "id": "2900-15",
+      "tema": "2900",
+      "nivel": "oro",
+      "enunciado": "¿Qué es la 'subcontratación' de las actividades subvencionadas?",
+      "opciones": [
+        "La cesión de la condición de beneficiario a un tercero.",
+        "La concertación con terceros de la ejecución total o parcial de la actividad que constituye el objeto de la subvención.",
+        "El alquiler de locales para realizar la actividad.",
+        "La compra de materiales necesarios para el proyecto."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 29.1 de la LGS define la subcontratación como la concertación con terceros de la ejecución total o parcial de la actividad que constituye el objeto de la subvención (no incluye los gastos ordinarios necesarios para su ejecución por el propio beneficiario).",
+      "referencia": "Art. 29.1 LGS"
+    },
+    {
+      "id": "2900-16",
+      "tema": "2900",
+      "nivel": "plata",
+      "enunciado": "Como regla general, si las bases reguladoras no disponen otra cosa, el beneficiario puede subcontratar:",
+      "opciones": [
+        "Hasta un porcentaje que no exceda del 50 por ciento del importe de la actividad subvencionada.",
+        "La totalidad de la actividad (100%).",
+        "Nada, está prohibido subcontratar (0%).",
+        "Hasta el 25% de la actividad."
+      ],
+      "correcta": 0,
+      "justificacion": "El artículo 29.2 de la LGS dispone que cuando la subcontratación esté permitida, y salvo que las bases fijen otro límite, el beneficiario podrá subcontratar hasta un porcentaje que no exceda del 50% del importe de la actividad subvencionada.",
+      "referencia": "Art. 29.2 LGS"
+    },
+    {
+      "id": "2900-17",
+      "tema": "2900",
+      "nivel": "oro",
+      "enunciado": "Para subcontratar, cuando la actividad subcontratada exceda del 20% del importe de la subvención y dicho importe sea superior a 60.000 euros, se requiere:",
+      "opciones": [
+        "Que la subcontratación se formalice por escrito y se autorice previamente por la entidad concedente.",
+        "Únicamente que se comunique al órgano concedente a posteriori.",
+        "Que el subcontratista se inscriba en el registro de contratistas.",
+        "Autorización del Consejo de Ministros."
+      ],
+      "correcta": 0,
+      "justificacion": "El artículo 29.3 de la LGS exige contrato por escrito y autorización previa del concedente cuando la subcontratación exceda del 20% de la subvención y el importe supere los 60.000 euros.",
+      "referencia": "Art. 29.3 LGS"
+    },
+    {
+      "id": "2900-18",
+      "tema": "2900",
+      "nivel": "plata",
+      "enunciado": "¿Qué ocurre si se produce la alteración de las condiciones tenidas en cuenta para la concesión de la subvención?",
+      "opciones": [
+        "Nada, la subvención se mantiene inalterada.",
+        "Podrá dar lugar a la modificación de la resolución de concesión, en los términos previstos en la normativa.",
+        "Se revocará automáticamente en todo caso.",
+        "El beneficiario debe devolver el doble del importe concedido."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 19.4 de la LGS señala que toda alteración de las condiciones tenidas en cuenta para la concesión podrá dar lugar a la modificación de la resolución de concesión, si así lo prevén las bases.",
+      "referencia": "Art. 19.4 LGS"
+    },
+    {
+      "id": "2900-19",
+      "tema": "2900",
+      "nivel": "oro",
+      "enunciado": "¿Cuál de las siguientes es causa del reintegro total o parcial de las cantidades percibidas por el beneficiario?",
+      "opciones": [
+        "Terminar la actividad subvencionada antes del plazo previsto.",
+        "Obtener la subvención falseando las condiciones requeridas u ocultando aquellas que lo hubieran impedido.",
+        "Pedir una modificación de las bases antes de la convocatoria.",
+        "Presentar la cuenta justificativa con un día de antelación al plazo."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 37.1 de la LGS enumera las causas de reintegro; la obtención falseando u ocultando condiciones (art. 37.1.a) es una de las causas más graves.",
+      "referencia": "Art. 37.1.a) LGS"
+    },
+    {
+      "id": "2900-20",
+      "tema": "2900",
+      "nivel": "plata",
+      "enunciado": "El incumplimiento de la obligación de justificación o la justificación insuficiente determinan:",
+      "opciones": [
+        "El reintegro de las cantidades percibidas y la exigencia del interés de demora correspondiente.",
+        "La pérdida del derecho al cobro únicamente, sin pago de intereses.",
+        "Una multa administrativa, pero sin tener que devolver lo ya cobrado.",
+        "La inhabilitación temporal para contratar, pero no el reintegro."
+      ],
+      "correcta": 0,
+      "justificacion": "El artículo 37.1.c) establece que el incumplimiento de la obligación de justificación o la justificación insuficiente darán lugar al reintegro de lo percibido más el interés de demora desde el pago.",
+      "referencia": "Art. 37.1.c) LGS"
+    },
+    {
+      "id": "2900-21",
+      "tema": "2900",
+      "nivel": "oro",
+      "enunciado": "El derecho de la Administración a reconocer o liquidar el reintegro de las subvenciones prescribe a los:",
+      "opciones": [
+        "2 años.",
+        "3 años.",
+        "4 años.",
+        "5 años."
+      ],
+      "correcta": 2,
+      "justificacion": "El artículo 39.1 de la LGS fija el plazo de prescripción del derecho de la Administración a reconocer o liquidar el reintegro en 4 años.",
+      "referencia": "Art. 39.1 LGS"
+    },
+    {
+      "id": "2900-22",
+      "tema": "2900",
+      "nivel": "bronce",
+      "enunciado": "La 'compatibilidad' de las subvenciones significa que, con carácter general y salvo que las bases digan lo contrario:",
+      "opciones": [
+        "Una actividad puede ser subvencionada por varias entidades siempre que el importe total no supere el coste de la actividad.",
+        "Nunca se pueden acumular dos subvenciones para un mismo proyecto.",
+        "Si se recibe una ayuda europea, no se pueden recibir ayudas estatales.",
+        "No existe límite en el importe, pudiendo superarse el coste de la actividad."
+      ],
+      "correcta": 0,
+      "justificacion": "El artículo 19.3 de la LGS establece que el importe de las subvenciones en ningún caso podrá ser de tal cuantía que, aisladamente o en concurrencia con otras ayudas, supere el coste de la actividad subvencionada.",
+      "referencia": "Art. 19.3 LGS"
+    },
+    {
+      "id": "2900-23",
+      "tema": "2900",
+      "nivel": "oro",
+      "enunciado": "¿Qué órgano es el competente, en la Administración General del Estado, para iniciar y resolver el procedimiento de reintegro de subvenciones?",
+      "opciones": [
+        "El Tribunal de Cuentas.",
+        "El Ministro o Secretario de Estado, como órgano concedente (o aquel en quien se haya delegado).",
+        "El Ministerio de Hacienda en todo caso.",
+        "La Intervención General de la Administración del Estado."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 41 de la LGS establece que el órgano competente para exigir el reintegro será el órgano concedente de la subvención (Ministros, Secretarios de Estado, etc.).",
+      "referencia": "Art. 41.1 LGS"
+    },
+    {
+      "id": "2900-24",
+      "tema": "2900",
+      "nivel": "plata",
+      "enunciado": "Las infracciones administrativas en materia de subvenciones prescriben:",
+      "opciones": [
+        "Al año las leves, a los 2 años las graves, a los 3 años las muy graves.",
+        "A los 4 años, tanto las leves, como las graves y las muy graves.",
+        "A los 5 años en todos los casos.",
+        "Las infracciones en materia de subvenciones no prescriben nunca."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 65 de la LGS establece un plazo general de prescripción de 4 años para todas las infracciones en materia de subvenciones.",
+      "referencia": "Art. 65.1 LGS"
+    },
+    {
+      "id": "2900-25",
+      "tema": "2900",
+      "nivel": "oro",
+      "enunciado": "Las sanciones pecuniarias por infracciones muy graves en materia de subvenciones pueden ascender a:",
+      "opciones": [
+        "Multa proporcional de 1 a 2 veces la cantidad indebidamente obtenida.",
+        "Multa proporcional del doble al triple de la cantidad indebidamente obtenida o, en su caso, de la no justificada.",
+        "Un tope máximo de 100.000 euros.",
+        "Una cuantía fija de 50.000 euros."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 61 de la LGS señala que para las infracciones muy graves la sanción será multa pecuniaria proporcional del doble al triple de la cantidad indebidamente obtenida o no justificada.",
+      "referencia": "Art. 61.2 LGS"
+    },
+    {
+      "id": "2900-26",
+      "tema": "2900",
+      "nivel": "plata",
+      "enunciado": "Junto con la multa pecuniaria, ¿qué sanciones no pecuniarias se pueden imponer por la comisión de una infracción muy grave?",
+      "opciones": [
+        "Prisión de hasta 1 año.",
+        "Pérdida temporal de la posibilidad de obtener subvenciones y ayudas públicas (hasta 5 años) e inhabilitación para contratar con la Administración.",
+        "Clausura del establecimiento de la entidad beneficiaria.",
+        "Pérdida del derecho de voto de los administradores."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 61.3 LGS contempla sanciones no pecuniarias como la pérdida, durante un plazo de hasta 5 años, de la posibilidad de obtener subvenciones, así como la prohibición de contratar con la Administración.",
+      "referencia": "Art. 61.3 LGS"
+    },
+    {
+      "id": "2900-27",
+      "tema": "2900",
+      "nivel": "oro",
+      "enunciado": "En la Comunidad Autónoma de Canarias, ¿qué Decreto aprueba el régimen aplicable a las subvenciones de la Administración Pública autonómica?",
+      "opciones": [
+        "Decreto 21/2015, de 16 de marzo.",
+        "Decreto 36/2009, de 31 de marzo.",
+        "Decreto 125/2012, de 8 de mayo.",
+        "Decreto 8/2015, de 2 de enero."
+      ],
+      "correcta": 1,
+      "justificacion": "El Decreto 36/2009, de 31 de marzo, establece el régimen general de subvenciones de la Comunidad Autónoma de Canarias.",
+      "referencia": "Decreto 36/2009 (Canarias)"
+    },
+    {
+      "id": "2900-28",
+      "tema": "2900",
+      "nivel": "plata",
+      "enunciado": "Según el Decreto 36/2009 de Canarias, ¿quién es competente para aprobar las bases reguladoras de las subvenciones en la CAC?",
+      "opciones": [
+        "El Parlamento de Canarias.",
+        "Los titulares de los Departamentos (Consejeros) correspondientes.",
+        "El Presidente del Gobierno de Canarias exclusivamente.",
+        "El Director General competente por razón de la materia."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 9 del Decreto 36/2009 dispone que la aprobación de las bases reguladoras corresponde a los titulares de los Departamentos (consejeros) de la Administración Pública de la CAC.",
+      "referencia": "Art. 9 Decreto 36/2009"
+    },
+    {
+      "id": "2900-29",
+      "tema": "2900",
+      "nivel": "oro",
+      "enunciado": "En Canarias, ¿qué órgano tiene la competencia para resolver la concesión de subvenciones?",
+      "opciones": [
+        "Exclusivamente el Consejo de Gobierno.",
+        "El Consejero titular del Departamento o el Presidente/Director del organismo, salvo que las bases la deleguen en otro órgano.",
+        "Siempre el Secretario General Técnico.",
+        "La Intervención General de la CAC."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 3.1 del Decreto 36/2009 establece que los titulares de los Departamentos (consejeros) y los presidentes/directores de organismos son los órganos competentes para conceder subvenciones.",
+      "referencia": "Art. 3.1 Decreto 36/2009"
+    },
+    {
+      "id": "2900-30",
+      "tema": "2900",
+      "nivel": "plata",
+      "enunciado": "Sin embargo, según el artículo 3 del Decreto 36/2009, se requiere autorización previa del Consejo de Gobierno de Canarias para conceder subvenciones directas cuando su importe supere:",
+      "opciones": [
+        "15.000 euros.",
+        "60.000 euros.",
+        "150.000 euros.",
+        "500.000 euros."
+      ],
+      "correcta": 2,
+      "justificacion": "El artículo 3.2.c) del Decreto 36/2009 exige acuerdo del Gobierno de Canarias para autorizar la concesión directa de subvenciones cuyo importe sea superior a 150.000 euros.",
+      "referencia": "Art. 3.2.c) Decreto 36/2009"
+    },
+    {
+      "id": "2900-31",
+      "tema": "2900",
+      "nivel": "bronce",
+      "enunciado": "El procedimiento de concesión en régimen de concurrencia competitiva se inicia siempre de oficio mediante:",
+      "opciones": [
+        "Resolución de adjudicación.",
+        "Convocatoria aprobada por el órgano competente, que debe publicarse en la Base de Datos Nacional de Subvenciones (y su extracto en el BOC).",
+        "Petición individual de un ciudadano interesado.",
+        "La presentación de las facturas."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 23 LGS y el art. 14 Decreto 36/2009 disponen que el procedimiento de concurrencia competitiva se inicia de oficio, mediante convocatoria pública (publicada por conducto de la BDNS y un extracto en el BOC).",
+      "referencia": "Art. 23 LGS / Art. 14 Dec. 36/2009"
+    },
+    {
+      "id": "2900-32",
+      "tema": "2900",
+      "nivel": "oro",
+      "enunciado": "En la Administración de la CAC (Decreto 36/2009), ¿cuál es el plazo máximo para resolver y notificar la resolución de concesión en concurrencia competitiva?",
+      "opciones": [
+        "3 meses.",
+        "6 meses, salvo que la norma fije un plazo menor.",
+        "12 meses.",
+        "No hay plazo máximo."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 25.4 LGS y concordantes fijan que el plazo máximo para resolver y notificar no podrá exceder de 6 meses desde la publicación del extracto de la convocatoria (salvo que la convocatoria fije uno menor).",
+      "referencia": "Art. 25.4 LGS / Normativa CAC"
+    },
+    {
+      "id": "2900-33",
+      "tema": "2900",
+      "nivel": "plata",
+      "enunciado": "El vencimiento del plazo máximo de resolución de la convocatoria de subvenciones sin haberse notificado resolución expresa, legitima a los interesados para entender:",
+      "opciones": [
+        "Estimada su solicitud por silencio administrativo positivo.",
+        "Desestimada su solicitud por silencio administrativo negativo.",
+        "Paralizado el procedimiento hasta que se resuelva.",
+        "Nula de pleno derecho toda la convocatoria."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 25.5 de la LGS establece que el vencimiento del plazo máximo sin notificar resolución legitima a los interesados para entender desestimada por silencio administrativo la solicitud (silencio negativo).",
+      "referencia": "Art. 25.5 LGS"
+    },
+    {
+      "id": "2900-34",
+      "tema": "2900",
+      "nivel": "oro",
+      "enunciado": "La 'Comisión de Valoración' o comité evaluador en el procedimiento de concurrencia competitiva tiene como función:",
+      "opciones": [
+        "Aprobar definitivamente la concesión de las ayudas.",
+        "Evaluar las solicitudes de acuerdo con los criterios de las bases reguladoras y emitir un informe o dictamen, en el que se concrete el resultado de la evaluación.",
+        "Revisar y fiscalizar las facturas de la justificación.",
+        "Requerir el reintegro de las ayudas."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 24.4 de la LGS dispone que el órgano colegiado (Comisión de Valoración) evaluará las solicitudes y emitirá informe que servirá de base al órgano instructor para formular su propuesta.",
+      "referencia": "Art. 24.4 LGS"
+    },
+    {
+      "id": "2900-35",
+      "tema": "2900",
+      "nivel": "plata",
+      "enunciado": "Antes de que se dicte la resolución de concesión, el órgano instructor debe redactar una:",
+      "opciones": [
+        "Propuesta de resolución provisional y, tras el trámite de audiencia, una propuesta de resolución definitiva.",
+        "Resolución de adjudicación firme.",
+        "Autorización de gasto definitiva.",
+        "Denegación presunta."
+      ],
+      "correcta": 0,
+      "justificacion": "El artículo 24 de la LGS y el 16 del Decreto 36/2009 indican que el instructor formulará propuesta de resolución provisional, otorgará trámite de audiencia, y posteriormente elevará la propuesta de resolución definitiva.",
+      "referencia": "Art. 24 LGS / Art. 16 Dec. 36/2009"
+    },
+    {
+      "id": "2900-36",
+      "tema": "2900",
+      "nivel": "bronce",
+      "enunciado": "¿Qué es el 'abono anticipado' de una subvención?",
+      "opciones": [
+        "El pago que se realiza tras finalizar la actividad, con rapidez.",
+        "El pago fraccionado mensual.",
+        "El pago que se realiza con carácter previo a la justificación y como financiación necesaria para poder llevar a cabo las actuaciones inherentes a la subvención.",
+        "El pago a entidades financieras."
+      ],
+      "correcta": 2,
+      "justificacion": "El artículo 34.4 de la LGS y el art. 37 del Decreto 36/2009 definen el abono anticipado como aquel que se realiza previamente a la justificación, sirviendo de financiación para ejecutar el proyecto.",
+      "referencia": "Art. 34.4 LGS / Art. 37 Dec. 36/2009"
+    },
+    {
+      "id": "2900-37",
+      "tema": "2900",
+      "nivel": "oro",
+      "enunciado": "Según el Decreto 36/2009, para el abono anticipado de subvenciones es exigible, con carácter general, que el beneficiario:",
+      "opciones": [
+        "Haya estado domiciliado en Canarias más de 10 años.",
+        "Constituya una garantía (aval) por el importe a anticipar, salvo que las bases o la normativa lo eximan (ej. AAPP, entidades sin ánimo de lucro en ciertos casos).",
+        "Autorice expresamente la inspección de su domicilio.",
+        "Tenga más de 50 trabajadores."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 38 del Decreto 36/2009 establece la exigencia de presentar garantías para los abonos anticipados, contemplando excepciones para las Administraciones Públicas, entidades sin fin de lucro y ayudas sociales de baja cuantía.",
+      "referencia": "Art. 38 Decreto 36/2009"
+    },
+    {
+      "id": "2900-38",
+      "tema": "2900",
+      "nivel": "plata",
+      "enunciado": "Los rendimientos financieros (intereses bancarios) que se generen por los fondos subvencionados librados de forma anticipada al beneficiario:",
+      "opciones": [
+        "Son propiedad del banco.",
+        "Pertenecen al beneficiario y los puede gastar libremente.",
+        "Incrementarán el importe de la subvención concedida y se aplicarán igualmente a la actividad subvencionada (salvo que las bases dispongan otra cosa).",
+        "Deben ser devueltos inmediatamente al Tesoro."
+      ],
+      "correcta": 2,
+      "justificacion": "El artículo 19.5 de la LGS establece que los rendimientos financieros de los fondos anticipados incrementarán la subvención y se aplicarán a la actividad, salvo que las bases dispongan lo contrario.",
+      "referencia": "Art. 19.5 LGS"
+    },
+    {
+      "id": "2900-39",
+      "tema": "2900",
+      "nivel": "oro",
+      "enunciado": "Si durante la justificación se comprueba que un beneficiario ha incumplido parte de la actividad (ej. ejecuta solo el 80% de lo prometido), pero el incumplimiento se aproxima significativamente al cumplimiento total:",
+      "opciones": [
+        "Se revocará automáticamente el 100% de la ayuda (reintegro total).",
+        "Las bases reguladoras deberán determinar los criterios de graduación de los incumplimientos, aplicando un reintegro parcial (principio de proporcionalidad).",
+        "Se considera cumplida al 100% y no se devuelve nada.",
+        "El beneficiario será sancionado con infracción penal directamente."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 17.3.n) LGS establece que las bases determinarán los criterios de graduación de incumplimientos (principio de proporcionalidad), debiendo responder a la parte del compromiso no cumplido.",
+      "referencia": "Art. 17.3.n) LGS"
+    },
+    {
+      "id": "2900-40",
+      "tema": "2900",
+      "nivel": "plata",
+      "enunciado": "¿Qué documento resulta fundamental para auditar que el gasto fue efectivamente pagado en la justificación de subvenciones (cuenta justificativa con aportación de justificantes de gasto)?",
+      "opciones": [
+        "El presupuesto estimado.",
+        "La memoria técnica del proyecto.",
+        "La factura junto con su correspondiente justificante de pago (transferencia bancaria, recibo).",
+        "La solicitud original de la subvención."
+      ],
+      "correcta": 2,
+      "justificacion": "El artículo 30.3 LGS dispone que los gastos se justificarán con facturas y demás documentos de valor probatorio equivalente, así como los justificantes del pago material.",
+      "referencia": "Art. 30.3 LGS"
+    },
+    {
+      "id": "2900-41",
+      "tema": "2900",
+      "nivel": "oro",
+      "enunciado": "La 'justificación mediante módulos' es un sistema en el cual la subvención:",
+      "opciones": [
+        "Se otorga en especie.",
+        "Se justifica acreditando la realización de la actividad a un coste unitario preestablecido en las bases (módulo), sin necesidad de aportar facturas de cada gasto individual.",
+        "Requiere una auditoría externa para cada factura.",
+        "Solo se puede aplicar a subvenciones nominativas."
+      ],
+      "correcta": 1,
+      "justificacion": "El Reglamento de la LGS (RD 887/2006) y la práctica autonómica permiten la justificación por módulos: se acredita cumplir la actividad (ej. número de alumnos formados) y se multiplica por el módulo (coste preaprobado).",
+      "referencia": "Reglamento LGS (RD 887/2006)"
+    },
+    {
+      "id": "2900-42",
+      "tema": "2900",
+      "nivel": "bronce",
+      "enunciado": "¿Está sujeto el beneficiario de una subvención a las labores de control financiero?",
+      "opciones": [
+        "No, una vez cobrada la ayuda se exime de control.",
+        "Sí, al control financiero de la Intervención General y del Tribunal de Cuentas (o Audiencia de Cuentas de Canarias), estando obligado a colaborar y aportar documentación.",
+        "Solo si la subvención supera el millón de euros.",
+        "Solo si es una entidad colaboradora."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 14.1.c) LGS obliga a los beneficiarios a someterse a las actuaciones de comprobación y control financiero de la Intervención General, aportando la información requerida.",
+      "referencia": "Art. 14.1.c) LGS"
+    },
+    {
+      "id": "2900-43",
+      "tema": "2900",
+      "nivel": "plata",
+      "enunciado": "¿Qué es la obligación de 'reintegro' en materia de subvenciones?",
+      "opciones": [
+        "La obligación de la Administración de pagar al beneficiario.",
+        "La obligación del beneficiario de devolver (reintegrar) total o parcialmente las cantidades cobradas más los intereses de demora, al darse las causas previstas en la ley.",
+        "La devolución del aval bancario depositado por el beneficiario.",
+        "El reingreso de remanentes en las arcas autonómicas."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 37 de la LGS y siguientes regulan el reintegro como la obligación de devolver los fondos públicos recibidos, más los intereses de demora desde el abono, cuando se incumple el fin o las condiciones.",
+      "referencia": "Arts. 37-41 LGS"
+    },
+    {
+      "id": "2900-44",
+      "tema": "2900",
+      "nivel": "oro",
+      "enunciado": "¿Quién resuelve los expedientes sancionadores por infracciones muy graves en el ámbito de las subvenciones concedidas por la Administración General del Estado?",
+      "opciones": [
+        "El titular de la Dirección General instructora.",
+        "El Ministro competente.",
+        "El Consejo de Ministros, previo informe de la Intervención General.",
+        "El Juez Central de lo Contencioso."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 66.1.a) de la LGS establece que la resolución de los procedimientos sancionadores corresponde a los Ministros o Secretarios de Estado competentes.",
+      "referencia": "Art. 66.1.a) LGS"
+    },
+    {
+      "id": "2900-45",
+      "tema": "2900",
+      "nivel": "plata",
+      "enunciado": "Según el Decreto 36/2009 de Canarias, la 'cuenta justificativa simplificada' podrá utilizarse para subvenciones concedidas cuyo importe sea inferior a:",
+      "opciones": [
+        "15.000 euros.",
+        "30.000 euros.",
+        "60.000 euros.",
+        "150.000 euros."
+      ],
+      "correcta": 2,
+      "justificacion": "A nivel estatal y aplicable en Canarias, la justificación mediante cuenta justificativa simplificada (sin aportar todas las facturas salvo que se exijan mediante muestreo) se aplica a subvenciones concedidas de menos de 60.000€.",
+      "referencia": "Reglamento LGS / Decreto 36/2009"
+    },
+    {
+      "id": "2900-46",
+      "tema": "2900",
+      "nivel": "oro",
+      "enunciado": "En la Administración canaria, ¿quién es el órgano encargado de elaborar el 'Plan Estratégico de Subvenciones' de una Consejería?",
+      "opciones": [
+        "El Consejero (titular del Departamento).",
+        "El Parlamento de Canarias.",
+        "La Dirección General de Presupuestos.",
+        "El Presidente del Gobierno autonómico."
+      ],
+      "correcta": 0,
+      "justificacion": "El artículo 6 del Decreto 36/2009 asigna la competencia para aprobar y modificar los planes estratégicos de subvenciones a los titulares de los Departamentos (consejeros) a los que se adscriben funcionalmente los créditos.",
+      "referencia": "Art. 6 Decreto 36/2009"
+    },
+    {
+      "id": "2900-47",
+      "tema": "2900",
+      "nivel": "bronce",
+      "enunciado": "¿Tienen que llevar un sistema contable separado o un código contable adecuado los beneficiarios de subvenciones si son empresas?",
+      "opciones": [
+        "No, basta con la contabilidad ordinaria sin distinción.",
+        "Sí, el art. 14.1.f) de la LGS obliga a disponer de los libros contables, registros diligenciados y demás documentos con el fin de garantizar el adecuado ejercicio de las facultades de comprobación y control.",
+        "Solo es exigible para subvenciones de la UE.",
+        "Solo para las fundaciones y asociaciones."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 14.1.f) de la LGS exige a los beneficiarios disponer de libros contables y registros que permitan identificar los gastos asociados a la subvención, para facilitar el control financiero.",
+      "referencia": "Art. 14.1.f) LGS"
+    },
+    {
+      "id": "2900-48",
+      "tema": "2900",
+      "nivel": "plata",
+      "enunciado": "¿Qué es una subvención nominativa?",
+      "opciones": [
+        "La que se otorga a nombre de una persona concreta por sorteo.",
+        "Aquella cuya dotación e identidad del beneficiario figuran expresamente en el estado de gastos de los Presupuestos Generales (del Estado o de la Comunidad Autónoma).",
+        "La que se adjudica al solicitante de menor edad.",
+        "Aquella en la que el beneficiario es siempre el Estado."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 22.2.a) LGS y la normativa presupuestaria definen como subvención nominativa a aquella que viene detallada en los presupuestos con su beneficiario y cuantía, tramitándose como concesión directa.",
+      "referencia": "Art. 22.2.a) LGS"
+    },
+    {
+      "id": "2900-49",
+      "tema": "2900",
+      "nivel": "oro",
+      "enunciado": "El plazo de prescripción del derecho de la Administración a exigir el reintegro se interrumpe:",
+      "opciones": [
+        "Por el transcurso del primer año.",
+        "Por cualquier acción de la Administración, notificada al interesado, tendente a determinar la exigencia del reintegro o por la interposición de recursos de cualquier clase.",
+        "No se interrumpe en ningún caso, es un plazo de caducidad.",
+        "Solo mediante sentencia judicial."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 39.3 de la LGS establece que el plazo de prescripción (4 años) se interrumpe por acciones formales de comprobación o exigencia de reintegro notificadas, o recursos interpuestos.",
+      "referencia": "Art. 39.3 LGS"
+    },
+    {
+      "id": "2900-50",
+      "tema": "2900",
+      "nivel": "plata",
+      "enunciado": "¿Quién asume la función de fiscalización previa de los expedientes de concesión de subvenciones en la Comunidad Autónoma de Canarias?",
+      "opciones": [
+        "La Dirección General de Función Pública.",
+        "La Intervención General de la Comunidad Autónoma.",
+        "El Tribunal de Cuentas del Estado.",
+        "El Consejo Consultivo de Canarias."
+      ],
+      "correcta": 1,
+      "justificacion": "La Intervención General de la CAC es el órgano encargado del control interno y de la fiscalización previa (control de legalidad, gastos) de los expedientes de concesión de subvenciones en Canarias.",
+      "referencia": "Ley de Hacienda de Canarias / Decreto 36/2009"
+    }
+  ]
+};
+
+fs.writeFileSync(path.join(__dirname, 'src/data/tema2900.json'), JSON.stringify(tema2900, null, 2), 'utf8');
+console.log('tema2900.json creado con 50 preguntas.');

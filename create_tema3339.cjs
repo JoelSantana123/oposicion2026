@@ -1,0 +1,762 @@
+const fs = require('fs');
+const path = require('path');
+
+const tema3339 = {
+  "tema_id": "3339",
+  "tema_nombre": "Procedimiento (Ley 39/2015) y Régimen Jurídico (Ley 40/2015) ⭐⭐",
+  "preguntas": [
+    {
+      "id": "3339-01",
+      "tema": "3339",
+      "nivel": "oro",
+      "enunciado": "¿A quiénes se aplica la Ley 39/2015 de Procedimiento Administrativo Común de las Administraciones Públicas?",
+      "opciones": [
+        "Solo a la Administración General del Estado.",
+        "Al sector público, que comprende: AGE, Administraciones de CCAA, entidades de Administración Local y sector público institucional.",
+        "Solo a las corporaciones locales.",
+        "Al sector público y al Poder Judicial."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 2.1 de la Ley 39/2015 establece que la Ley se aplica al sector público: AGE, CCAA, Entidades Locales y sector público institucional.",
+      "referencia": "Art. 2.1 Ley 39/2015"
+    },
+    {
+      "id": "3339-02",
+      "tema": "3339",
+      "nivel": "plata",
+      "enunciado": "Tienen 'capacidad de obrar' ante las Administraciones Públicas:",
+      "opciones": [
+        "Solo las personas físicas mayores de 18 años.",
+        "Las personas que la ostenten con arreglo a las normas civiles, y también los menores de edad para el ejercicio de sus derechos que el ordenamiento les permita actuar sin asistencia, además de los grupos de afectados y uniones sin personalidad jurídica cuando la ley lo declare expresamente.",
+        "Exclusivamente las personas jurídicas inscritas en registros públicos.",
+        "Solo los ciudadanos españoles o de la UE."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 3 de la Ley 39/2015 amplía la capacidad de obrar a los menores (si el ordenamiento se lo permite), y cuando la ley lo prevea, a grupos de afectados, uniones y patrimonios independientes sin personalidad jurídica.",
+      "referencia": "Art. 3 Ley 39/2015"
+    },
+    {
+      "id": "3339-03",
+      "tema": "3339",
+      "nivel": "oro",
+      "enunciado": "Tienen la consideración de 'interesados' en el procedimiento administrativo:",
+      "opciones": [
+        "Solo quienes promuevan el procedimiento.",
+        "Quienes lo promuevan como titulares de derechos o intereses legítimos, los que sin haberlo iniciado tengan derechos que puedan resultar afectados, y aquellos cuyos intereses legítimos puedan resultar afectados y se personen antes de que recaiga resolución definitiva.",
+        "Cualquier ciudadano, siempre que lo solicite por escrito.",
+        "Solo quienes tengan derechos subjetivos directos y exclusivos."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 4 de la Ley 39/2015 define el concepto de interesado incluyendo a promotores (derechos/intereses), titulares de derechos que puedan afectarse (aunque no lo inicien), y titulares de intereses legítimos que se personen a tiempo.",
+      "referencia": "Art. 4.1 Ley 39/2015"
+    },
+    {
+      "id": "3339-04",
+      "tema": "3339",
+      "nivel": "plata",
+      "enunciado": "¿Para qué actuaciones es preceptivo u obligatorio que los interesados acrediten la representación?",
+      "opciones": [
+        "Para cualquier trámite, incluso la presentación de quejas.",
+        "Solo para formular solicitudes.",
+        "Para formular solicitudes, presentar declaraciones responsables o comunicaciones, interponer recursos, desistir de acciones y renunciar a derechos.",
+        "No es obligatorio en ningún caso si el interesado lo solicita."
+      ],
+      "correcta": 2,
+      "justificacion": "El artículo 5.3 de la Ley 39/2015 exige acreditar la representación expresamente para formular solicitudes, presentar declaraciones o comunicaciones, interponer recursos, desistir y renunciar a derechos en nombre de otro.",
+      "referencia": "Art. 5.3 Ley 39/2015"
+    },
+    {
+      "id": "3339-05",
+      "tema": "3339",
+      "nivel": "bronce",
+      "enunciado": "Si falta o es insuficiente la acreditación de la representación, el órgano competente debe requerir su subsanación. ¿En qué plazo?",
+      "opciones": [
+        "10 días.",
+        "15 días.",
+        "20 días.",
+        "1 mes."
+      ],
+      "correcta": 0,
+      "justificacion": "El artículo 5.6 de la Ley 39/2015 dispone que la falta o insuficiencia de acreditación no impedirá tener por realizado el acto, siempre que se aporte o subsane el defecto en el plazo de 10 días (o plazo superior si lo permite el órgano).",
+      "referencia": "Art. 5.6 Ley 39/2015"
+    },
+    {
+      "id": "3339-06",
+      "tema": "3339",
+      "nivel": "oro",
+      "enunciado": "¿Cuáles de los siguientes sujetos están obligados, en todo caso, a relacionarse a través de medios electrónicos con las Administraciones Públicas?",
+      "opciones": [
+        "Todas las personas físicas.",
+        "Las personas jurídicas, entidades sin personalidad, profesionales colegiados (para trámites de su profesión), quienes representen a un obligado, y empleados públicos para trámites inherentes a su condición.",
+        "Solo las grandes empresas.",
+        "Nadie está obligado."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 14.2 de la Ley 39/2015 enumera los sujetos obligados a relacionarse electrónicamente: personas jurídicas, entidades sin personalidad jurídica, colegiados profesionales, representantes de obligados y empleados públicos.",
+      "referencia": "Art. 14.2 Ley 39/2015"
+    },
+    {
+      "id": "3339-07",
+      "tema": "3339",
+      "nivel": "plata",
+      "enunciado": "El plazo máximo general en el que debe notificarse la resolución expresa en los procedimientos en los que la norma reguladora no fije un plazo específico será de:",
+      "opciones": [
+        "1 mes.",
+        "3 meses.",
+        "6 meses.",
+        "1 año."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 21.3 de la Ley 39/2015 establece que cuando las normas reguladoras no fijen plazo máximo, este será de 3 meses.",
+      "referencia": "Art. 21.3 Ley 39/2015"
+    },
+    {
+      "id": "3339-08",
+      "tema": "3339",
+      "nivel": "oro",
+      "enunciado": "¿Qué efectos produce el silencio administrativo en los procedimientos iniciados a solicitud del interesado?",
+      "opciones": [
+        "Siempre desestimatorio (negativo).",
+        "Regla general estimatorio (positivo), salvo que una norma con rango de ley o de Derecho UE establezca lo contrario, y en los casos tasados: derecho de petición, facultades sobre dominio público, actividades perjudiciales para el medio ambiente, responsabilidad patrimonial e impugnación de actos.",
+        "Siempre estimatorio, sin excepciones.",
+        "No existe el silencio si se inicia a solicitud del interesado."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 24.1 de la Ley 39/2015 establece la regla general del silencio positivo, salvo excepciones previstas por ley o derecho UE, o en supuestos tasados como daño al medio ambiente, dominio público, recursos o responsabilidad patrimonial.",
+      "referencia": "Art. 24.1 Ley 39/2015"
+    },
+    {
+      "id": "3339-09",
+      "tema": "3339",
+      "nivel": "plata",
+      "enunciado": "¿Qué ocurre si se estima por silencio un recurso de alzada que se interpuso contra la desestimación presunta (silencio) de la solicitud inicial?",
+      "opciones": [
+        "Doble silencio negativo: queda desestimado.",
+        "Se entiende desestimado, porque es materia de recursos.",
+        "Se entiende estimado (doble silencio), siempre que no se refiera a materias exceptuadas (medio ambiente, dominio público, etc.).",
+        "Hay que ir al contencioso-administrativo forzosamente."
+      ],
+      "correcta": 2,
+      "justificacion": "El artículo 24.1 (párrafo 3) establece la regla del 'doble silencio': cuando el recurso de alzada se interpone contra la desestimación por silencio, si llega el plazo de resolución del recurso y hay nuevo silencio, se entiende estimado, salvo en materias exceptuadas.",
+      "referencia": "Art. 24.1 Ley 39/2015"
+    },
+    {
+      "id": "3339-10",
+      "tema": "3339",
+      "nivel": "oro",
+      "enunciado": "En los procedimientos iniciados de oficio, el vencimiento del plazo máximo sin resolución expresa produce los siguientes efectos:",
+      "opciones": [
+        "Silencio positivo en todos los casos.",
+        "Desestimación de la pretensión si el procedimiento pudiera reconocer derechos; y caducidad si el procedimiento es susceptible de producir efectos desfavorables o de gravamen.",
+        "Caducidad en todos los procedimientos.",
+        "La Administración queda liberada de resolver."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 25 de la Ley 39/2015 distingue: si el procedimiento de oficio puede reconocer derechos, el silencio es negativo (desestimación); si el procedimiento es sancionador o de gravamen, se produce la caducidad y archivo de las actuaciones.",
+      "referencia": "Art. 25.1 Ley 39/2015"
+    },
+    {
+      "id": "3339-11",
+      "tema": "3339",
+      "nivel": "bronce",
+      "enunciado": "Si los plazos se señalan por DÍAS en la Ley 39/2015, se entienden:",
+      "opciones": [
+        "Naturales, siempre.",
+        "Hábiles, excluyéndose del cómputo los sábados, domingos y festivos, salvo que la ley o norma del Derecho UE disponga que sean naturales.",
+        "Hábiles, excluyendo solo los domingos.",
+        "Hábiles, incluyendo los sábados."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 30.2 de la Ley 39/2015 fija la regla general de que los plazos por días son hábiles, excluyendo expresamente sábados, domingos y festivos (novedad frente a la antigua Ley 30/1992 que incluía los sábados).",
+      "referencia": "Art. 30.2 Ley 39/2015"
+    },
+    {
+      "id": "3339-12",
+      "tema": "3339",
+      "nivel": "oro",
+      "enunciado": "Cuando los plazos se fijan en MESES o AÑOS, ¿cómo se computan?",
+      "opciones": [
+        "De fecha a fecha. Si en el mes de vencimiento no hubiera día equivalente, el plazo expira el último día del mes. Si el último día es inhábil, se prorroga al primer hábil siguiente.",
+        "Por meses naturales de 30 días.",
+        "En días hábiles exclusivamente.",
+        "Solo cuentan los días laborables."
+      ],
+      "correcta": 0,
+      "justificacion": "El artículo 30.4 de la Ley 39/2015 establece el cómputo de fecha a fecha para meses o años. Si no hay día equivalente (ej. 31 de febrero), expira el último día del mes (28 o 29). Si el vencimiento cae en inhábil, se prorroga al hábil siguiente.",
+      "referencia": "Art. 30.4 Ley 39/2015"
+    },
+    {
+      "id": "3339-13",
+      "tema": "3339",
+      "nivel": "plata",
+      "enunciado": "Salvo precepto en contrario, los plazos en el procedimiento administrativo pueden ampliarse. Esta ampliación no puede exceder de:",
+      "opciones": [
+        "La mitad del plazo establecido originalmente.",
+        "El doble del plazo establecido.",
+        "10 días hábiles en todo caso.",
+        "Un mes."
+      ],
+      "correcta": 0,
+      "justificacion": "El artículo 32.1 de la Ley 39/2015 permite conceder, de oficio o a petición, una ampliación de los plazos que no exceda de la mitad de los mismos, siempre que las circunstancias lo aconsejen y no se perjudiquen derechos de terceros.",
+      "referencia": "Art. 32.1 Ley 39/2015"
+    },
+    {
+      "id": "3339-14",
+      "tema": "3339",
+      "nivel": "oro",
+      "enunciado": "¿Qué actos administrativos deben ser motivados en todo caso?",
+      "opciones": [
+        "Todos los actos de trámite.",
+        "Los actos que limiten derechos, los que resuelvan recursos/revisiones, los que se separen del criterio seguido en actuaciones precedentes, los acuerdos de suspensión/medidas cautelares, tramitación de urgencia, ampliación de plazos y los que rechacen pruebas.",
+        "Solo los actos sancionadores.",
+        "Solo las resoluciones que pongan fin a la vía administrativa."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 35 de la Ley 39/2015 detalla una lista tasada de actos que requieren motivación explícita, incluyendo actos restrictivos, resolución de recursos, apartamiento de precedentes, medidas cautelares y rechazo de pruebas, entre otros.",
+      "referencia": "Art. 35.1 Ley 39/2015"
+    },
+    {
+      "id": "3339-15",
+      "tema": "3339",
+      "nivel": "plata",
+      "enunciado": "La nulidad de pleno derecho (art. 47 Ley 39/2015) se produce en los siguientes actos:",
+      "opciones": [
+        "Solo en los que carezcan de motivación.",
+        "Los que lesionen derechos constitucionales susceptibles de amparo, los dictados por órgano manifiestamente incompetente, los que carezcan totalmente de procedimiento, los constitutivos de infracción penal y los actos expresos/presuntos contrarios al ordenamiento por los que se adquieren facultades sin cumplir los requisitos.",
+        "Cualquier acto que infrinja una norma jurídica, aunque sea de forma leve.",
+        "Solo en los reglamentos."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 47.1 de la Ley 39/2015 contiene el listado cerrado (tasado) de causas de nulidad de pleno derecho de los actos administrativos (lesión de derechos fundamentales, incompetencia material/territorial manifiesta, omisión total de procedimiento, infracción penal, adquirir facultades sin cumplir requisitos).",
+      "referencia": "Art. 47.1 Ley 39/2015"
+    },
+    {
+      "id": "3339-16",
+      "tema": "3339",
+      "nivel": "oro",
+      "enunciado": "La anulabilidad (art. 48 Ley 39/2015) afecta a:",
+      "opciones": [
+        "Las actuaciones que carezcan absolutamente de procedimiento.",
+        "Cualquier infracción del ordenamiento jurídico, incluso la desviación de poder. El defecto de forma solo si carece de requisitos formales indispensables o produce indefensión.",
+        "Solo las actuaciones fuera de plazo.",
+        "La infracción de derechos y libertades fundamentales."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 48 de la Ley 39/2015 establece que son anulables los actos que incurran en cualquier infracción del ordenamiento, incluso desviación de poder. Los defectos de forma solo causan anulabilidad si producen indefensión o faltan requisitos indispensables.",
+      "referencia": "Art. 48 Ley 39/2015"
+    },
+    {
+      "id": "3339-17",
+      "tema": "3339",
+      "nivel": "bronce",
+      "enunciado": "La realización de actuaciones administrativas fuera del plazo fijado implica:",
+      "opciones": [
+        "La nulidad de pleno derecho automática.",
+        "Su anulabilidad solo cuando así lo imponga la naturaleza del término o plazo (es decir, si el plazo es esencial).",
+        "Ninguna consecuencia jurídica nunca.",
+        "La suspensión del procedimiento."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 48.3 de la Ley 39/2015 establece que las actuaciones fuera del tiempo establecido solo implicarán la anulabilidad del acto cuando así lo imponga la naturaleza del término o plazo (plazos esenciales o preclusivos).",
+      "referencia": "Art. 48.3 Ley 39/2015"
+    },
+    {
+      "id": "3339-18",
+      "tema": "3339",
+      "nivel": "oro",
+      "enunciado": "Las notificaciones electrónicas se entenderán rechazadas cuando hayan transcurrido:",
+      "opciones": [
+        "10 días naturales desde la puesta a disposición de la resolución o acto sin que se acceda a su contenido.",
+        "15 días hábiles.",
+        "5 días.",
+        "30 días naturales."
+      ],
+      "correcta": 0,
+      "justificacion": "El artículo 43.2 de la Ley 39/2015 establece que la notificación por medios electrónicos se entenderá rechazada si transcurren 10 días naturales desde la puesta a disposición del acto sin acceder a su contenido.",
+      "referencia": "Art. 43.2 Ley 39/2015"
+    },
+    {
+      "id": "3339-19",
+      "tema": "3339",
+      "nivel": "plata",
+      "enunciado": "Para que una notificación sea válida, debe contener, como mínimo:",
+      "opciones": [
+        "El texto íntegro de la resolución.",
+        "El texto íntegro de la resolución, con indicación de si pone fin a la vía administrativa, y los recursos que procedan, órgano ante el que interponerlos y plazo.",
+        "Una reseña breve y la dirección de la sede electrónica.",
+        "Solo el fallo o parte dispositiva."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 40.2 de la Ley 39/2015 exige que toda notificación contenga el texto íntegro, la indicación de si agota o no la vía administrativa, la expresión de los recursos (administrativos/judiciales), órgano y plazo.",
+      "referencia": "Art. 40.2 Ley 39/2015"
+    },
+    {
+      "id": "3339-20",
+      "tema": "3339",
+      "nivel": "oro",
+      "enunciado": "¿Qué es la publicación de actos administrativos y cuándo es preceptiva (sustituyendo a la notificación)?",
+      "opciones": [
+        "Solo ocurre a petición del interesado.",
+        "Sustituye a la notificación cuando el acto tenga por destinatario a una pluralidad indeterminada de personas, o en procesos selectivos y de concurrencia competitiva.",
+        "Se publica todo acto en el BOE directamente.",
+        "Solo aplica para las disposiciones generales."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 45 de la Ley 39/2015 establece que los actos se publicarán, surtiendo los mismos efectos que la notificación, cuando los destinatarios sean pluralidad indeterminada (ej. ofertas de empleo público) o en concurrencia competitiva (subvenciones).",
+      "referencia": "Art. 45.1 Ley 39/2015"
+    },
+    {
+      "id": "3339-21",
+      "tema": "3339",
+      "nivel": "plata",
+      "enunciado": "En las notificaciones en papel (domicilio del interesado), si nadie se hace cargo, ¿qué debe hacer la Administración?",
+      "opciones": [
+        "Publicarlo en el BOE inmediatamente.",
+        "Hacer constar el intento fallido y repetirlo por una sola vez y en una hora distinta dentro de los tres días siguientes. (Si el primero fue antes de las 15h, el segundo será después de las 15h, y viceversa, con un margen de al menos 3 horas).",
+        "Considerarlo notificado el mismo día.",
+        "Remitirlo a la policía."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 42.2 de la Ley 39/2015 regula el doble intento de notificación domiciliaria. Si el primero es infructuoso, se repite en los 3 días siguientes, a una hora distinta (cambiando franja mañana/tarde dejando al menos 3h de diferencia).",
+      "referencia": "Art. 42.2 Ley 39/2015"
+    },
+    {
+      "id": "3339-22",
+      "tema": "3339",
+      "nivel": "bronce",
+      "enunciado": "Si transcurrido el plazo de subsanación de defectos en una solicitud (10 días) el interesado no lo hace, se le tendrá por:",
+      "opciones": [
+        "Inadmitido.",
+        "Desistido de su petición, previa resolución que debe dictar la Administración.",
+        "Renunciado a su derecho.",
+        "Sancionado con multa leve."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 68 de la Ley 39/2015 indica que si no se subsana, se tendrá al interesado por desistido de su petición, previa resolución dictada en los términos del art. 21.",
+      "referencia": "Art. 68.1 Ley 39/2015"
+    },
+    {
+      "id": "3339-23",
+      "tema": "3339",
+      "nivel": "oro",
+      "enunciado": "¿En qué se diferencia el desistimiento de la renuncia (art. 94 Ley 39/2015)?",
+      "opciones": [
+        "Son exactamente lo mismo.",
+        "El desistimiento implica abandonar el procedimiento actual, pudiendo volver a iniciarlo si el derecho no ha prescrito; la renuncia implica abandonar el derecho material subyacente, impidiendo volver a ejercerlo.",
+        "El desistimiento es de la Administración, la renuncia del ciudadano.",
+        "La renuncia solo se aplica a cargos públicos."
+      ],
+      "correcta": 1,
+      "justificacion": "El desistimiento afecta solo al procedimiento concreto promovido, conservando el derecho de fondo. La renuncia extingue el derecho sustantivo sobre el que se fundamenta la solicitud, si la ley lo permite.",
+      "referencia": "Art. 94 Ley 39/2015"
+    },
+    {
+      "id": "3339-24",
+      "tema": "3339",
+      "nivel": "plata",
+      "enunciado": "En la fase de instrucción, el 'trámite de audiencia' tiene un plazo legalmente fijado de:",
+      "opciones": [
+        "10 días hábiles exactos.",
+        "No inferior a 10 días ni superior a 15 días.",
+        "1 mes.",
+        "15 a 30 días."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 82.2 de la Ley 39/2015 establece que el trámite de audiencia, que se realiza antes de redactar la propuesta de resolución, tendrá un plazo no inferior a 10 días ni superior a 15 días.",
+      "referencia": "Art. 82.2 Ley 39/2015"
+    },
+    {
+      "id": "3339-25",
+      "tema": "3339",
+      "nivel": "oro",
+      "enunciado": "Los actos administrativos que NO ponen fin a la vía administrativa son susceptibles de:",
+      "opciones": [
+        "Recurso de reposición potestativo.",
+        "Recurso de alzada ante el órgano superior jerárquico del que los dictó.",
+        "Recurso directo contencioso-administrativo.",
+        "Recurso de revisión."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 121 de la Ley 39/2015 dispone que contra resoluciones y actos de trámite (cualificados) que NO pongan fin a la vía administrativa, cabe interponer recurso de alzada ante el superior jerárquico.",
+      "referencia": "Art. 121.1 Ley 39/2015"
+    },
+    {
+      "id": "3339-26",
+      "tema": "3339",
+      "nivel": "plata",
+      "enunciado": "¿Qué plazo hay para interponer un recurso de alzada contra una resolución expresa?",
+      "opciones": [
+        "15 días.",
+        "1 mes.",
+        "3 meses.",
+        "En cualquier momento."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 122.1 de la Ley 39/2015 fija en 1 mes el plazo de interposición del recurso de alzada si el acto fuera expreso. Si fuera presunto, se puede en cualquier momento a partir del día siguiente al que se produzca el silencio.",
+      "referencia": "Art. 122.1 Ley 39/2015"
+    },
+    {
+      "id": "3339-27",
+      "tema": "3339",
+      "nivel": "oro",
+      "enunciado": "El recurso potestativo de reposición se interpone:",
+      "opciones": [
+        "Ante el órgano superior jerárquico.",
+        "Ante el mismo órgano que dictó el acto, cuando este acto ponga fin a la vía administrativa.",
+        "Ante los juzgados contencioso-administrativos.",
+        "Solo en materia de Función Pública."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 123 de la Ley 39/2015 indica que los actos que PONGAN FIN a la vía administrativa podrán ser recurridos potestativamente en reposición ante el mismo órgano que los hubiera dictado (o ser impugnados directamente ante la jurisdicción contenciosa).",
+      "referencia": "Art. 123.1 Ley 39/2015"
+    },
+    {
+      "id": "3339-28",
+      "tema": "3339",
+      "nivel": "plata",
+      "enunciado": "El plazo máximo para dictar y notificar la resolución del recurso de reposición es de:",
+      "opciones": [
+        "1 mes.",
+        "2 meses.",
+        "3 meses.",
+        "6 meses."
+      ],
+      "correcta": 0,
+      "justificacion": "El artículo 124.2 de la Ley 39/2015 señala que el plazo máximo para dictar y notificar la resolución del recurso de reposición es de 1 mes (y contra su resolución no cabe nuevo recurso de reposición).",
+      "referencia": "Art. 124.2 Ley 39/2015"
+    },
+    {
+      "id": "3339-29",
+      "tema": "3339",
+      "nivel": "oro",
+      "enunciado": "El recurso extraordinario de revisión cabe contra actos firmes en vía administrativa en supuestos muy concretos. ¿Cuál NO es uno de ellos?",
+      "opciones": [
+        "Que al dictarlos se hubiera incurrido en error de hecho que resulte de los propios documentos incorporados al expediente.",
+        "Que aparezcan documentos de valor esencial para la resolución que, aunque posteriores, evidencien error en la resolución.",
+        "Que el interesado no esté de acuerdo con la interpretación jurídica aplicada por la Administración.",
+        "Que en la resolución hayan influido esencialmente documentos declarados falsos por sentencia penal firme."
+      ],
+      "correcta": 2,
+      "justificacion": "El recurso extraordinario de revisión (art. 125) se basa en circunstancias puramente objetivas y tasadas (error de hecho documental, documentos nuevos, falsedad, prevaricación/cohecho), no en divergencias de interpretación jurídica.",
+      "referencia": "Art. 125.1 Ley 39/2015"
+    },
+    {
+      "id": "3339-30",
+      "tema": "3339",
+      "nivel": "plata",
+      "enunciado": "La 'revisión de oficio' de actos nulos (art. 106 Ley 39/2015) exige un requisito esencial:",
+      "opciones": [
+        "Solo la propuesta del órgano instructor.",
+        "Dictamen previo favorable del Consejo de Estado u órgano consultivo equivalente de la Comunidad Autónoma.",
+        "Aprobación por el Consejo de Ministros en todos los casos.",
+        "Resolución judicial previa."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 106 de la Ley 39/2015 exige para declarar de oficio la nulidad de un acto, en cualquier momento, el previo dictamen favorable del Consejo de Estado u órgano consultivo equivalente.",
+      "referencia": "Art. 106.1 Ley 39/2015"
+    },
+    {
+      "id": "3339-31",
+      "tema": "3339",
+      "nivel": "oro",
+      "enunciado": "¿Qué es la 'declaración de lesividad' (art. 107 Ley 39/2015)?",
+      "opciones": [
+        "La declaración para pedir daños y perjuicios a un particular.",
+        "La declaración por parte de la Administración de que un acto favorable al interesado, pero que incurre en infracción (anulable), lesiona el interés público, siendo requisito previo para impugnarlo ante la jurisdicción contencioso-administrativa.",
+        "Una medida de protección de los funcionarios agredidos.",
+        "La indemnización por expropiación forzosa."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 107 prevé que las Administraciones, para anular un acto favorable para el ciudadano pero anulable, deben declararlo lesivo para el interés público (plazo máx. 4 años) y proceder a su impugnación ante los Tribunales contenciosos.",
+      "referencia": "Art. 107 Ley 39/2015"
+    },
+    {
+      "id": "3339-32",
+      "tema": "3339",
+      "nivel": "plata",
+      "enunciado": "En la Ley 40/2015 (Régimen Jurídico del Sector Público), la 'competencia' es:",
+      "opciones": [
+        "Irrenunciable y se ejerce por los órganos que la tengan atribuida como propia, salvo casos de delegación o avocación legalmente previstos.",
+        "Plenamente renunciable mediante contrato privado.",
+        "Transferible por simple acuerdo verbal de los funcionarios.",
+        "Exclusiva de los Ministros."
+      ],
+      "correcta": 0,
+      "justificacion": "El artículo 8 de la Ley 40/2015 consagra que la competencia es irrenunciable y se ejercerá por los órganos titulares, salvo supuestos de delegación, avocación, encomienda de gestión o delegación de firma.",
+      "referencia": "Art. 8 Ley 40/2015"
+    },
+    {
+      "id": "3339-33",
+      "tema": "3339",
+      "nivel": "oro",
+      "enunciado": "La 'delegación de competencias' (art. 9 Ley 40/2015) implica que:",
+      "opciones": [
+        "Se transfiere la titularidad de la competencia a otro órgano.",
+        "Se delega el ejercicio de la competencia, pero no se altera la titularidad de la misma. Las resoluciones se entienden dictadas por el órgano delegante.",
+        "Solo puede delegarse a favor de empresas privadas.",
+        "El órgano delegado es responsable en exclusiva."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 9 de la Ley 40/2015 establece que la delegación no altera la titularidad. Las resoluciones indicarán expresamente esta circunstancia y se consideran dictadas por el delegante.",
+      "referencia": "Art. 9 Ley 40/2015"
+    },
+    {
+      "id": "3339-34",
+      "tema": "3339",
+      "nivel": "bronce",
+      "enunciado": "La 'avocación' (art. 10 Ley 40/2015) consiste en:",
+      "opciones": [
+        "Que un órgano superior recaba para sí el conocimiento de un asunto cuya resolución corresponda ordinariamente a sus órganos administrativos dependientes (o en los que haya delegado).",
+        "Transferir el expediente al Ministerio de Justicia.",
+        "Descentralizar funciones a entidades locales.",
+        "Firmar documentos por ausencia del titular."
+      ],
+      "correcta": 0,
+      "justificacion": "El artículo 10 de la Ley 40/2015 permite que los órganos superiores avoquen (llamen hacia sí) el conocimiento de uno o varios asuntos concretos cuya resolución corresponda a órganos dependientes, motivándolo expresamente.",
+      "referencia": "Art. 10 Ley 40/2015"
+    },
+    {
+      "id": "3339-35",
+      "tema": "3339",
+      "nivel": "oro",
+      "enunciado": "Según el artículo 23 de la Ley 40/2015 (Abstención), una autoridad o empleado público deberá abstenerse de intervenir en un procedimiento si:",
+      "opciones": [
+        "Conoce de vista a uno de los interesados.",
+        "Tiene interés personal en el asunto, parentesco (consanguinidad hasta 4º grado, afinidad hasta 2º), amistad íntima o enemistad manifiesta, o relación de servicio con los interesados.",
+        "El asunto es muy complejo.",
+        "Ha votado en unas elecciones."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 23.2 de la Ley 40/2015 enumera las causas de abstención, destinadas a preservar la imparcialidad objetiva (interés personal, parentesco 4º/2º, amistad/enemistad manifiesta, haber intervenido como perito/testigo, relación de servicio).",
+      "referencia": "Art. 23.2 Ley 40/2015"
+    },
+    {
+      "id": "3339-36",
+      "tema": "3339",
+      "nivel": "plata",
+      "enunciado": "Si un empleado público no se abstiene concurriendo causa para ello, el interesado puede promover en cualquier momento del procedimiento:",
+      "opciones": [
+        "La recusación.",
+        "El despido libre.",
+        "Una demanda civil.",
+        "El indulto."
+      ],
+      "correcta": 0,
+      "justificacion": "El artículo 24 de la Ley 40/2015 establece que en los casos de concurrencia de causas de abstención (art. 23), los interesados podrán promover la recusación, formulándose por escrito con las causas alegadas.",
+      "referencia": "Art. 24 Ley 40/2015"
+    },
+    {
+      "id": "3339-37",
+      "tema": "3339",
+      "nivel": "oro",
+      "enunciado": "La responsabilidad patrimonial de las Administraciones Públicas (art. 32 Ley 40/2015) exige que los particulares tengan derecho a ser indemnizados por:",
+      "opciones": [
+        "Cualquier molestia derivada del pago de impuestos.",
+        "Toda lesión que sufran en cualquiera de sus bienes y derechos, siempre que sea consecuencia del funcionamiento normal o anormal de los servicios públicos (salvo fuerza mayor), y el daño sea efectivo, evaluable económicamente e individualizado.",
+        "Solo los daños por el funcionamiento anormal.",
+        "Solo daños físicos acreditados por perito judicial."
+      ],
+      "correcta": 1,
+      "justificacion": "El art. 32 de la Ley 40/2015 (derivado del 106.2 CE) configura un sistema objetivo de responsabilidad (funcionamiento normal o anormal), exigiendo daño efectivo, evaluable e individualizado, que el particular no tenga el deber jurídico de soportar.",
+      "referencia": "Art. 32 Ley 40/2015"
+    },
+    {
+      "id": "3339-38",
+      "tema": "3339",
+      "nivel": "plata",
+      "enunciado": "El derecho a reclamar por responsabilidad patrimonial a la Administración prescribe:",
+      "opciones": [
+        "Al año de producido el hecho o el acto que motive la indemnización, o de manifestarse su efecto lesivo (en lesiones físicas/psíquicas, desde la curación o alcance de secuelas).",
+        "A los 4 años.",
+        "A los 5 años.",
+        "Es imprescriptible."
+      ],
+      "correcta": 0,
+      "justificacion": "El artículo 67.1 de la Ley 39/2015 (que regula el procedimiento) establece un plazo de prescripción de un año desde que se produce el hecho lesivo, o en daños a las personas, desde la curación o estabilización de secuelas.",
+      "referencia": "Art. 67.1 Ley 39/2015"
+    },
+    {
+      "id": "3339-39",
+      "tema": "3339",
+      "nivel": "bronce",
+      "enunciado": "En la potestad sancionadora (Ley 40/2015), el principio de 'tipicidad' supone que:",
+      "opciones": [
+        "El infractor siempre paga.",
+        "Constituyen infracciones las vulneraciones del ordenamiento previstas como tales infracciones por una Ley, cuyas conductas están descritas de forma exhaustiva.",
+        "Las sanciones pueden imponerse por analogía.",
+        "Solo se sanciona con multa económica."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 27 de la Ley 40/2015 consagra el principio de tipicidad: solo son infracciones las vulneraciones fijadas por Ley. Se prohíbe la aplicación analógica de normas sancionadoras.",
+      "referencia": "Art. 27 Ley 40/2015"
+    },
+    {
+      "id": "3339-40",
+      "tema": "3339",
+      "nivel": "oro",
+      "enunciado": "El principio de proporcionalidad en materia sancionadora (art. 29 Ley 40/2015) implica, entre otros aspectos, que en la graduación de la sanción se tendrá en cuenta:",
+      "opciones": [
+        "Solo la renta del infractor.",
+        "El grado de culpabilidad o intencionalidad, la continuidad de la conducta infractora, la naturaleza de los perjuicios causados y la reincidencia (en 1 año).",
+        "Únicamente si es reincidente.",
+        "Nada, la sanción es siempre fija."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 29.3 de la Ley 40/2015 enumera los criterios de graduación: intencionalidad, continuidad, naturaleza de los perjuicios, reincidencia (en el término de un año en infracciones de la misma naturaleza).",
+      "referencia": "Art. 29.3 Ley 40/2015"
+    },
+    {
+      "id": "3339-41",
+      "tema": "3339",
+      "nivel": "plata",
+      "enunciado": "En los procedimientos de naturaleza sancionadora (Ley 39/2015), ¿existe separación entre la fase instructora y la sancionadora (resolución)?",
+      "opciones": [
+        "No, lo hace el mismo órgano por agilidad.",
+        "Sí, el procedimiento debe establecer la debida separación entre la fase instructora y la sancionadora, encomendándolas a órganos distintos.",
+        "Solo cuando lo solicite el presunto infractor.",
+        "Sí, pero solo para infracciones muy graves."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 63.1 de la Ley 39/2015 establece como garantía del procedimiento sancionador la debida separación entre la fase instructora y la resolutoria, encomendándolas a órganos distintos (para garantizar la imparcialidad).",
+      "referencia": "Art. 63.1 Ley 39/2015"
+    },
+    {
+      "id": "3339-42",
+      "tema": "3339",
+      "nivel": "oro",
+      "enunciado": "En el marco de un expediente sancionador, el presunto responsable puede lograr reducciones sobre el importe de la sanción propuesta si:",
+      "opciones": [
+        "Reconoce su responsabilidad (reducción mínima del 20%) y realiza el pago voluntario en cualquier momento anterior a la resolución (reducción adicional mínima del 20%).",
+        "Aporta pruebas falsas.",
+        "Reclama judicialmente y desiste.",
+        "Es la primera vez que comete infracción (reducción del 50%)."
+      ],
+      "correcta": 0,
+      "justificacion": "El artículo 85 de la Ley 39/2015 establece reducciones (mínimo 20% cada una, acumulables) por el reconocimiento de responsabilidad y por el pago voluntario de la sanción pecuniaria antes de la resolución (renunciando a cualquier recurso).",
+      "referencia": "Art. 85 Ley 39/2015"
+    },
+    {
+      "id": "3339-43",
+      "tema": "3339",
+      "nivel": "plata",
+      "enunciado": "La 'encomienda de gestión' (art. 11 Ley 40/2015) permite a un órgano o entidad:",
+      "opciones": [
+        "Crear una empresa pública.",
+        "Encargar a otro órgano o entidad de la misma o de distinta Administración la realización de actividades de carácter material o técnico, por razones de eficacia o por carecer de medios, sin suponer cesión de titularidad ni de elementos sustantivos.",
+        "Ceder sus competencias mediante un contrato privado.",
+        "Contratar empleados directamente."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 11 de la Ley 40/2015 regula la encomienda de gestión como el encargo de tareas puramente materiales, técnicas o de servicios (ej. procesar datos) sin transferir la titularidad jurídica de la competencia ni implicar ejercicio de autoridad.",
+      "referencia": "Art. 11 Ley 40/2015"
+    },
+    {
+      "id": "3339-44",
+      "tema": "3339",
+      "nivel": "oro",
+      "enunciado": "¿Qué prevé el art. 21 de la Ley 39/2015 sobre la obligación de resolver?",
+      "opciones": [
+        "La Administración solo resuelve si se lo piden.",
+        "La Administración está obligada a dictar resolución expresa y a notificarla en todos los procedimientos cualquiera que sea su forma de iniciación.",
+        "Puede no resolver acogiéndose al silencio en todos los casos.",
+        "Solo tiene que resolver en los procedimientos sancionadores."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 21.1 impone a la Administración la obligación inexcusable de dictar resolución expresa y notificarla en TODOS los procedimientos, sin que el silencio administrativo exima de esta obligación.",
+      "referencia": "Art. 21.1 Ley 39/2015"
+    },
+    {
+      "id": "3339-45",
+      "tema": "3339",
+      "nivel": "plata",
+      "enunciado": "¿Es el 'Convenio' (art. 47 Ley 40/2015) un contrato sometido a la Ley de Contratos del Sector Público?",
+      "opciones": [
+        "Sí, es un tipo de contrato de servicios.",
+        "No, los convenios son acuerdos de voluntades celebrados por sujetos de Derecho Público (entre sí o con privados) para un fin común, que se rigen por la Ley 40/2015 y no constituyen contratos del sector público.",
+        "Sí, si superan los 100.000 euros.",
+        "Son acuerdos exclusivamente diplomáticos internacionales."
+      ],
+      "correcta": 1,
+      "justificacion": "El Capítulo VI del Título Preliminar de la Ley 40/2015 (arts. 47-53) regula los Convenios como acuerdos que no tienen la consideración de contrato sujeto a la LCSP, persiguiendo fines comunes (sin sinalagma de prestación/precio de mercado).",
+      "referencia": "Art. 47 Ley 40/2015"
+    },
+    {
+      "id": "3339-46",
+      "tema": "3339",
+      "nivel": "oro",
+      "enunciado": "La 'delegación de firma' (art. 12 Ley 40/2015) permite a los titulares de los órganos:",
+      "opciones": [
+        "Transferir la competencia para que otro órgano resuelva.",
+        "En materias de su propia competencia, delegar únicamente la firma de sus resoluciones y actos en los titulares de órganos subordinados (no altera la competencia).",
+        "Firmar cualquier documento fuera de la Administración.",
+        "Usar firma electrónica de otro funcionario."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 12 de la Ley 40/2015 establece que la delegación de firma se limita al acto material de firmar. En las resoluciones firmadas por delegación se hará constar la autoridad de procedencia. No requiere publicación (a diferencia de la delegación de competencias).",
+      "referencia": "Art. 12 Ley 40/2015"
+    },
+    {
+      "id": "3339-47",
+      "tema": "3339",
+      "nivel": "bronce",
+      "enunciado": "El 'procedimiento tramitado de urgencia' (art. 33 Ley 39/2015) supone que:",
+      "opciones": [
+        "Se saltan todos los trámites legales.",
+        "Se reducen a la mitad los plazos establecidos para el procedimiento ordinario, salvo los relativos a presentación de solicitudes y recursos.",
+        "Se resuelve en 24 horas.",
+        "Se evita el trámite de audiencia siempre."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 33.1 de la Ley 39/2015 dispone que, de oficio o a instancia, si razones de interés público lo aconsejan, se tramitará de urgencia reduciendo los plazos a la mitad (excepto solicitudes y recursos).",
+      "referencia": "Art. 33.1 Ley 39/2015"
+    },
+    {
+      "id": "3339-48",
+      "tema": "3339",
+      "nivel": "plata",
+      "enunciado": "¿Qué es la figura del 'Convalidación' de actos anulables (art. 52 Ley 39/2015)?",
+      "opciones": [
+        "Un pacto extrajudicial.",
+        "La subsanación por la Administración de los vicios de los que adolezca un acto anulable (ej. incompetencia jerárquica convalidada por el superior), produciendo efectos desde su fecha.",
+        "La aprobación en el Parlamento de un decreto.",
+        "La conversión de un reglamento nulo."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 52 de la Ley 39/2015 permite que la Administración convalide los actos anulables (no los nulos de pleno derecho), subsanando los vicios de que adolezcan. El acto de convalidación produce efecto desde su fecha.",
+      "referencia": "Art. 52 Ley 39/2015"
+    },
+    {
+      "id": "3339-49",
+      "tema": "3339",
+      "nivel": "oro",
+      "enunciado": "El registro electrónico general (art. 16 Ley 39/2015) permite la presentación de documentos:",
+      "opciones": [
+        "Solo en horario de mañana de lunes a viernes.",
+        "Todos los días del año durante las veinticuatro horas del día.",
+        "Solo en días hábiles de 9 a 14h.",
+        "Cuando el servidor local esté operativo en días laborables."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 31.2.a) de la Ley 39/2015 establece que el registro electrónico de cada Administración estará accesible todos los días del año durante las 24 horas.",
+      "referencia": "Art. 31.2.a) Ley 39/2015"
+    },
+    {
+      "id": "3339-50",
+      "tema": "3339",
+      "nivel": "plata",
+      "enunciado": "Las certificaciones y copias auténticas de documentos en formato electrónico expedidas por las AAPP tienen la consideración de:",
+      "opciones": [
+        "Documento privado con valor presuntivo.",
+        "Documento público administrativo, con idéntica validez y eficacia que los documentos originales.",
+        "Meras fotocopias sin valor en juicio.",
+        "Documentos provisionales hasta su compulsa física."
+      ],
+      "correcta": 1,
+      "justificacion": "El artículo 27.1 de la Ley 39/2015 establece que las copias auténticas tienen la misma validez y eficacia que los documentos originales. El sistema prioriza el formato electrónico con CSV (Código Seguro de Verificación).",
+      "referencia": "Art. 27.1 Ley 39/2015"
+    }
+  ]
+};
+
+fs.writeFileSync(path.join(__dirname, 'src/data/tema3339.json'), JSON.stringify(tema3339, null, 2), 'utf8');
+console.log('tema3339.json creado con 50 preguntas.');
