@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Clock, CheckCircle, XCircle } from 'lucide-react';
@@ -51,6 +51,16 @@ export default function TestRunner() {
   const [respuestas, setRespuestas] = useState({});
   const [showFeedback, setShowFeedback] = useState(false);
   const [timeLeft, setTimeLeft] = useState(modo === 'oficial' ? longitud * 60 : null);
+  
+  const feedbackRef = useRef(null);
+
+  useEffect(() => {
+    if (showFeedback && feedbackRef.current) {
+      setTimeout(() => {
+        feedbackRef.current.scrollIntoView({ behavior: 'smooth', block: 'end' });
+      }, 100);
+    }
+  }, [showFeedback]);
 
   useEffect(() => {
     if (tema === 'SIMULACRO_OFICIAL') {
@@ -180,6 +190,7 @@ export default function TestRunner() {
       <AnimatePresence>
         {showFeedback && (
           <motion.div
+            ref={feedbackRef}
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             style={{
