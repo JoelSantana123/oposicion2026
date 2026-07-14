@@ -57,7 +57,7 @@ export default function TestRunner() {
   useEffect(() => {
     if (showFeedback && feedbackRef.current) {
       setTimeout(() => {
-        feedbackRef.current.scrollIntoView({ behavior: 'smooth', block: 'end' });
+        feedbackRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }, 100);
     }
   }, [showFeedback]);
@@ -97,6 +97,7 @@ export default function TestRunner() {
 
   const nextQuestion = () => {
     setShowFeedback(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     if (currentIdx < preguntas.length - 1) {
       setCurrentIdx(prev => prev + 1);
     } else {
@@ -196,24 +197,52 @@ export default function TestRunner() {
             style={{
               marginTop: '2rem',
               padding: '1.5rem',
-              background: 'rgba(0,0,0,0.2)',
-              borderRadius: '8px',
-              borderLeft: '4px solid var(--accent-color)'
+              background: 'rgba(0,0,0,0.3)',
+              borderRadius: '12px',
+              borderLeft: '4px solid var(--accent-color)',
+              border: '1px solid rgba(255,255,255,0.1)'
             }}
           >
-            <p style={{ fontWeight: '600', marginBottom: '0.5rem', color: answeredIdx === pregunta.correcta ? 'var(--success-color)' : 'var(--error-color)' }}>
-              {answeredIdx === pregunta.correcta ? '¡Correcto!' : answeredIdx === undefined ? 'En blanco' : 'Incorrecto'}
-            </p>
-            <p style={{ color: 'var(--text-secondary)', lineHeight: '1.5', fontSize: '0.95rem' }}>{pregunta.justificacion}</p>
-            <p style={{ marginTop: '0.5rem', fontSize: '0.8rem', color: 'var(--accent-hover)' }}>{pregunta.referencia}</p>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1rem', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '0.75rem', flexWrap: 'wrap', gap: '0.5rem' }}>
+              <span style={{ fontSize: '1.2rem', fontWeight: 'bold', color: answeredIdx === pregunta.correcta ? 'var(--success-color)' : answeredIdx === undefined ? 'var(--text-secondary)' : 'var(--error-color)' }}>
+                {answeredIdx === pregunta.correcta ? '✅ ¡Correcto!' : answeredIdx === undefined ? '⚪ En blanco' : '❌ Incorrecto'}
+              </span>
+              <span style={{ fontSize: '0.85rem', background: 'rgba(255,255,255,0.1)', padding: '0.3rem 0.7rem', borderRadius: '4px', color: 'var(--text-secondary)' }}>
+                Explicación y Justificación Legal (Pregunta {currentIdx + 1})
+              </span>
+            </div>
+
+            <p style={{ color: 'var(--text-primary)', lineHeight: '1.6', fontSize: '0.95rem', marginBottom: '1rem' }}>{pregunta.justificacion}</p>
+            {pregunta.referencia && (
+              <p style={{ marginTop: '0.5rem', fontSize: '0.85rem', color: 'var(--accent-hover)', fontWeight: '500' }}>📚 {pregunta.referencia}</p>
+            )}
             
-            <div style={{ marginTop: '1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <button className="btn btn-secondary" onClick={() => navigate('/')} style={{ borderColor: 'var(--error-color)', color: 'var(--error-color)' }}>
-                Salir
+            <div style={{ marginTop: '2rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              <button 
+                className="btn btn-primary" 
+                onClick={nextQuestion}
+                style={{ 
+                  width: '100%', 
+                  padding: '1.2rem', 
+                  fontSize: '1.1rem', 
+                  fontWeight: 'bold', 
+                  background: 'linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)',
+                  boxShadow: '0 4px 15px rgba(59, 130, 246, 0.4)',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                  cursor: 'pointer'
+                }}
+              >
+                {currentIdx < preguntas.length - 1 ? `➡️ Siguiente Pregunta (Ir a la ${currentIdx + 2} de ${preguntas.length})` : '🏆 Ver Resultados Finales'}
               </button>
-              <button className="btn btn-primary" onClick={nextQuestion}>
-                {currentIdx < preguntas.length - 1 ? 'Siguiente Pregunta' : 'Ver Resultados'}
-              </button>
+              
+              <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <button className="btn btn-secondary" onClick={() => navigate('/')} style={{ borderColor: 'var(--error-color)', color: 'var(--error-color)', fontSize: '0.9rem', padding: '0.5rem 1rem' }}>
+                  Salir del Test
+                </button>
+              </div>
             </div>
           </motion.div>
         )}
